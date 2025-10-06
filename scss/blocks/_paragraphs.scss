@@ -1,0 +1,28 @@
+p {
+  font-size: var(--font-size-0);
+  line-height: var(--line-height-text);
+  color: var(--color-text);
+}
+
+
+/* Space between consecutive paragraphs */
+p + p {
+  margin-bottom: var(--spacing-small);
+}
+
+/* Heading after paragraph */
+p + h2 {
+  margin-top: var(--spacing-medium);
+}
+
+/* Single last paragraph: trim bottom margin */
+p:last-child:only-child {
+  margin-bottom: 0;
+}
+
+/* Improve dark mode readability */
+@media (prefers-color-scheme: dark) {
+  p {
+    word-spacing: 0.05em;
+  }
+}

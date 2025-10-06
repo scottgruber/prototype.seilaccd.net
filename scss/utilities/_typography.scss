@@ -1,0 +1,71 @@
+.standfirst {
+  margin-block-start: 0;
+  margin-block-end: var(--spacing-default);
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  color: var(--color-text-strong);
+}
+
+.lede {
+  margin-top: 0;
+  margin-bottom: var(--spacing-default);
+  color: var(--color-brand);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-display);
+}
+
+.big {
+  font-size: var(--font-size-7);
+  text-transform: uppercase;
+  margin-block: 0;
+  color: var(--color-brand);
+}
+
+// For fonts samplers
+
+.display {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-6);
+}
+
+.thin {
+  font-weight: 100;
+}
+
+.extra-light {
+  font-weight: 200;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.extra-bold {
+  font-weight: 800;
+}
+
+.black {
+  font-weight: 900;
+}
+
+.italic {
+  font-style: italic;
+}

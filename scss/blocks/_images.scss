@@ -1,0 +1,29 @@
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Images */
+
+img {
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+img[width],
+img[height] {
+  max-width: none;
+}
+
+img.img-circle,
+img.avatar {
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+}
+
+iframe {
+  height: initial;
+  aspect-ratio: 16 / 9;
+}

@@ -1,0 +1,64 @@
+/* 1) Semantics for localized quotes */
+blockquote {
+  quotes: "“" "”" "‘" "’";
+}
+
+/* 2) Base styling */
+blockquote {
+  position: relative;
+  margin-block: var(--spacing-medium);
+  margin-inline-start: var(--spacing-medium);        
+  max-width: var(--line-length-default);
+  color: var(--color-accent);
+  font-size: var(--font-size-2);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-display);
+  /* optional: improve rag right */
+  hanging-punctuation: first allow-end;
+}
+
+/* 3) Opening quote — hangs in the left gutter */
+blockquote::before {
+  content: open-quote;                /* locale-friendly */
+  position: absolute;
+  inset-block-start: 0;               /* top:0 (logical) */
+  inset-inline-start: -0.2em;         /* hang into gutter */
+  transform: translateY(-0.05em);     /* tiny optical nudge */
+  font-size: var(--font-size-6);                     /* scales with blockquote font-size */
+  line-height: 1;
+  color: currentColor;
+  pointer-events: none;
+}
+
+/* 4) Closing quote — align to last text line without magic numbers */
+blockquote::after {
+  content: close-quote;
+  position: absolute;
+  inset-inline-end: -0.2em;          /* a gentle hang */
+  inset-block-end: 0;                 /* anchor to bottom of block */
+  transform: translateY(0.35em);      /* nudge to visually sit on baseline */
+  font-size: var(--font-size-6);
+  line-height: 1;
+  color: currentColor;
+  pointer-events: none;
+}
+
+/* Secondary paragraph inside a blockquote
+   (e.g., a follow-up sentence or elaboration) */
+blockquote p + p.secondary {
+  margin-top: 0;
+  font-size: var(--font-size-0);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-default);
+  opacity: 0.85; /* softens tone slightly */
+}
+
+/* Citation — attribution line within a blockquote */
+blockquote cite {
+  display: block;
+  margin-top: var(--spacing-default);
+  font-size: var(--font-size--1);
+  font-style: italic;
+  color: currentColor; /* inherits theme accent */
+  text-align: right;   /* visually separates attribution */
+}

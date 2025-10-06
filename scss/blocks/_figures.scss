@@ -1,0 +1,15 @@
+/* Figures */
+figure {
+  margin: 0 0 var(--spacing-large);
+}
+
+figure img {
+  height: auto;
+  margin-bottom: var(--spacing-default);
+}
+
+figcaption {
+  font-size: var(--font-size--1);
+  margin-top: 0.25rem;
+  color: inherit;
+}

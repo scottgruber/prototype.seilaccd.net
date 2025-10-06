@@ -1,0 +1,21 @@
+/* Links */
+a:link {
+  color: var(--sei-link);
+  text-decoration-color: color-mix(in srgb, var(--sei-link) 60%, transparent);
+}
+
+a:visited {
+  color: var(--sei-link-visited);
+}
+
+a:hover {
+  color: var(--sei-link-hover);
+  text-decoration-color: currentColor;
+}
+
+a:focus,
+a:active {
+  color: var(--sei-link-active);
+  outline: 2px solid var(--sei-link);
+  outline-offset: 2px;
+}

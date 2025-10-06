@@ -1,0 +1,17 @@
+/* Lists */
+ol,
+ul {
+  margin-top: var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
+  margin-left: 0;
+  padding-left: 1.25em; /* provide room for markers */
+  color: var(--color-text);
+  line-height: var(--line-height-text);
+}
+
+/* Use native markers by default */
+ul[class] {
+  list-style: none;
+  padding-left: 0; /* optional: removes left indent */
+  margin: 0;       /* optional: resets default spacing */
+}

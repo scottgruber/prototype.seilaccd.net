@@ -1,0 +1,6 @@
+footer {
+  grid-area: footer;
+  margin: var(--spacing-medium);
+  padding-top: var(--spacing-default);
+  border-top: var(--border-width-thin) solid var(--color-theme);
+}

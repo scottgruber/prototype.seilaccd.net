@@ -1,0 +1,304 @@
+:root {
+
+  // New Type Scale (Major Second)   
+  /* https://utopia.fyi/type/calculator?c=360,16,1.25,1240,20,1.25,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+  --font-size--2: clamp(0.72rem, 0.6873rem + 0.1455vw, 0.8rem);
+  /* Step -2: 11.52px → 12.8px  */
+  --font-size--1: clamp(0.9rem, 0.8591rem + 0.1818vw, 1rem);
+  /* Step -1: 14.4px  → 16px     */
+  --font-size-0: clamp(1.125rem, 1.0739rem + 0.2273vw, 1.25rem);
+  /* Step  0: 18px    → 20px     */
+  --font-size-1: clamp(1.4063rem, 1.3423rem + 0.2841vw, 1.5625rem);
+  /* Step  1: 22.5px  → 25px     */
+  --font-size-2: clamp(1.7578rem, 1.6779rem + 0.3551vw, 1.9531rem);
+  /* Step  2: 28.125px→ 31.25px  */
+  --font-size-3: clamp(2.1973rem, 2.0974rem + 0.4439vw, 2.4414rem);
+  /* Step  3: 35.1563px→ 39.0625px*/
+  --font-size-4: clamp(2.7466rem, 2.6217rem + 0.5549vw, 3.0518rem);
+  /* Step  4: 43.9453px→ 48.8281px*/
+  --font-size-5: clamp(3.4332rem, 3.2772rem + 0.6936vw, 3.8147rem);
+  /* Step  5: 54.9316px→ 61.0352px*/
+  --font-size-6: clamp(4.2915rem, 4.0965rem + 0.867vw, 4.7684rem);
+  /* Step  6: 68.6646px→ 76.2939px*/
+  --font-size-7: clamp(5.3644rem, 5.1206rem + 1.0837vw, 5.9605rem);
+  /* Step  7: 85.8307px→ 95.3674px*/
+
+
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.05em;
+
+  --font-family: "PT Sans", sans-serif;
+  --font-family-display: "PT Sans", sans-serif;
+  --font-family-system: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  //* Typography Perfect Fourth 1.333 */
+  --font-size-6: 4.209rem;
+  --font-size-xx-large: 3.157rem;
+  --font-size-x-large: 2.369rem;
+  --font-size-large: 1.777rem;
+  --font-size-medium: 1.333rem;
+  --font-size-default: 1rem;
+  --font-size-small: 0.833rem;
+  --font-size-x-small: 0.694rem;
+
+  --font-weight-thin: 100;
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;
+
+  --line-height-text: 1.4;
+  --line-height-display: 1.1;
+  --line-height-default: 1.2;
+
+  /* Borders */
+  --border-width-hairline: 0.5px;
+  --border-width-thin: 1px;
+  --border-width-thick: 4px;
+  --border-radius: 1rem;
+  --border-circle: 50%;
+
+  /* Layout */
+  --grid-4-6: 2fr 1fr 1fr 2fr 2fr 1fr 1fr 2fr;
+  --grid-4-5: 6fr 1fr 4fr 3fr 3fr 4fr 1fr 6fr;
+  --grid-3-4: 3fr 1fr 2fr 2fr 1fr 3fr;
+  --grid-2-3: 1fr 3fr;
+  --grid-1-3: 1fr 1fr 1fr;
+  --gap: 1em;
+  --grid-column-gap: 2vw;
+  --grid-row-gap: 4vh;
+  --max-width: 92rem;
+  --line-length-default: 45ch;
+  --line-length-large: 60ch;
+
+  /* Spacing */
+  --spacing-small: 0.5em;
+  --spacing-default: 1em;
+  --spacing-medium: 1.5em;
+  --spacing-large: 3em;
+
+  --duration-immediately: 0.1s;
+  --duration-instantly: 0;
+  --duration-promptly: 0.5s;
+  --duration-quickly: 0.2s;
+  --duration-slowly: 1s;
+
+
+  /* Sand tonal scale (base color at 800) */
+  --color-sand-100: hsl(24, 17%, 22%);
+  /* #3c322d */
+  --color-sand-200: hsl(24, 17%, 30%);
+  /* #51443d */
+  --color-sand-300: hsl(24, 17%, 38%);
+  /* #685850 */
+  --color-sand-400: hsl(24, 17%, 48%);
+  /* #877469 */
+  --color-sand-500: hsl(24, 17%, 58%);
+  /* #a39082 */
+  --color-sand-600: hsl(24, 17%, 65%);
+  /* #b5a79d ≈ --color-sand-dark */
+  --color-sand-700: hsl(24, 17%, 75%);
+  /* #cfc2ba */
+  --color-sand-800: hsl(24, 17%, 83%);
+  /* #dad1cb ≈ --color-sand (base) */
+  --color-sand-900: hsl(24, 17%, 92%);
+  /* #f0ebe8 ≈ --color-sand-light */
+
+  /* Brown (#5C4E48 base at 400) */
+  --color-brown-100: hsl(21, 10%, 12%);
+  /* #1f1b19 */
+  --color-brown-200: hsl(21, 10%, 18%);
+  /* #2f2926 */
+  --color-brown-300: hsl(21, 10%, 25%);
+  /* #423732 */
+  --color-brown-400: hsl(21, 10%, 32%);
+  /* #5c4e48 (base) */
+  --color-brown-500: hsl(21, 10%, 39%);
+  /* #6e6159 */
+  --color-brown-600: hsl(21, 10%, 46%);
+  /* #7a685f */
+  --color-brown-700: hsl(21, 10%, 58%);
+  /* #9a877c */
+  --color-brown-800: hsl(21, 10%, 70%);
+  /* #b9a79d */
+  --color-brown-900: hsl(21, 10%, 85%);
+  /* #ded6d3 */
+
+  /* Blue (#007CB6) */
+  --color-blue-100: hsl(197, 100%, 15%);
+  /* #00374c */
+  --color-blue-200: hsl(197, 100%, 22%);
+  /* #005070 */
+  --color-blue-300: hsl(197, 100%, 29%);
+  /* #006a94 */
+  --color-blue-400: hsl(197, 100%, 36%);
+  /* #0084b8 (≈ base; your original hex: #007CB6) */
+  --color-blue-500: hsl(197, 100%, 44%);
+  /* #00a1e0 */
+  --color-blue-600: hsl(197, 100%, 54%);
+  /* #14bdff */
+  --color-blue-700: hsl(197, 100%, 64%);
+  /* #47cbff */
+  --color-blue-800: hsl(197, 100%, 74%);
+  /* #7ad9ff */
+  --color-blue-900: hsl(197, 100%, 86%);
+  /* #b8ebff */
+
+
+  /* Green (#41583d) */
+  --color-green-100: hsl(143, 21%, 15%);
+  /* #1d251b — darkest */
+  --color-green-200: hsl(143, 21%, 20%);
+  /* #263323 */
+  --color-green-300: hsl(143, 21%, 27%);
+  /* #344631 */
+  --color-green-400: hsl(143, 21%, 34%);
+  /* #41583d — base */
+  --color-green-500: hsl(143, 21%, 42%);
+  /* #527049 */
+  --color-green-600: hsl(143, 21%, 52%);
+  /* #6a8f5f */
+  --color-green-700: hsl(143, 21%, 62%);
+  /* #8aac7f */
+  --color-green-800: hsl(143, 21%, 72%);
+  /* #adc8a3 */
+  --color-green-900: hsl(143, 21%, 85%);
+  /* #d5e5cf — lightest */
+
+  /* Orchid (#af79b4) */
+  --color-orchid-100: hsl(295, 28%, 18%);
+  /* #39213b */
+  --color-orchid-200: hsl(295, 28%, 28%);
+  /* #58335b */
+  --color-orchid-300: hsl(295, 28%, 40%);
+  /* #7e4983 */
+  --color-orchid-400: hsl(295, 28%, 50%);
+  /* #9d5ca3 */
+  --color-orchid-500: hsl(295, 28%, 59%);
+  /* #af79b4 (≈ #B076B7) */
+  --color-orchid-600: hsl(295, 28%, 68%);
+  /* #c097c4 */
+  --color-orchid-700: hsl(295, 28%, 76%);
+  /* #d0b1d3 */
+  --color-orchid-800: hsl(295, 28%, 84%);
+  /* #e0cbe2 */
+  --color-orchid-900: hsl(295, 28%, 92%);
+  /* #efe5f0 */
+
+  /* Yellow / Sun (#f6d765) */
+  --color-yellow-100: hsl(47, 89%, 20%);
+  /* #604d06 */
+  --color-yellow-200: hsl(47, 89%, 32%);
+  /* #9a7b09 */
+  --color-yellow-300: hsl(47, 89%, 50%);
+  /* #f1c00e */
+  --color-yellow-400: hsl(47, 89%, 60%);
+  /* #f4cc3e */
+  --color-yellow-500: hsl(47, 89%, 68%);
+  /* #f6d765 (≈ #F6D763) */
+  --color-yellow-600: hsl(47, 89%, 76%);
+  /* #f8e18b */
+  --color-yellow-700: hsl(47, 89%, 84%);
+  /* #fbebb2 */
+  --color-yellow-800: hsl(47, 89%, 90%);
+  /* #fcf2cf */
+  --color-yellow-900: hsl(47, 89%, 95%);
+  /* #fef9e7 */
+
+  --color-laccd-logo: #005a97;
+
+
+  /* Core surfaces & text */
+  --sei-surface: var(--color-paper);
+  /* page background */
+  --sei-surface-alt: var(--color-sand-900);
+  /* subtle panels */
+  --sei-surface-elev: var(--color-sand-800);
+  /* cards */
+  --sei-border: var(--color-brown-300);
+  --sei-outline: var(--color-blue-500);
+  /* focus ring */
+
+  --sei-text: var(--color-brown-100);
+  /* default body text */
+  --sei-text-strong: var(--color-brown-300);
+  --sei-text-muted: var(--color-sand-500);
+
+  /* Brand & accents */
+  --sei-brand: var(--color-green-400);
+  --sei-brand-strong: var(--color-green-600);
+  --sei-accent: var(--color-blue-500);
+  --sei-accent-strong: var(--color-blue-600);
+  --sei-highlight: var(--color-orchid-500);
+
+  /* Links */
+  --sei-link: var(--sei-brand);
+  --sei-link-visited: var(--color-orchid-300);
+  --sei-link-hover: var(--color-orchid-100);
+  --sei-link-active: var(--sei-link);
+  --sei-link-underline: var(--sei-link);
+
+  /* Feedback */
+  --sei-info: var(--color-blue-500);
+  --sei-success: var(--color-green-600);
+  --sei-warn: var(--color-yellow-500);
+  --sei-danger: var(--color-brown-300);
+
+  /* Components */
+  --sei-card-bg: var(--sei-surface-elev);
+  --sei-card-border: var(--sei-border);
+  --sei-card-text: var(--sei-text);
+
+  --sei-btn-bg: var(--color-orchid-300);
+  --sei-btn-bg-hover: var(--color-orchid-200);
+  --sei-btn-text: white;
+  --sei-btn-border: var(--color-orchid-100);
+
+  --sei-input-bg: white;
+  --sei-input-border: var(--sei-border);
+  --sei-input-text: var(--sei-text);
+  --sei-input-placeholder: var(--sei-text-muted);
+
+  /* Selection */
+  --sei-selection-bg: var(--color-orchid-300);
+  --sei-selection-text: white;
+
+  --color-brand: var(--sei-brand);
+  --color-text: var(--sei-text);
+  --color-background: var(--sei-surface);
+  --color-border: var(--sei-border);
+  --color-accent: var(--color-orchid-200);
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-brand: var(--color-green-600);
+    --color-text: var(--color-sand-900);
+    --color-background: var(--color-green-200);
+    --color-accent: var(--color-yellow-700);
+    --color-laccd-logo: var(--color-sand-900);
+
+    --sei-link: var(--color-yellow-900);
+    --sei-link-visited: var(--color-yellow-900);
+    --sei-link-hover: var(--color-blue-900);
+    --sei-link-active: var(--sei-link);
+    --sei-link-underline: var(--sei-link);
+  }
+}
+
+@viewport {
+  width: device-width;
+}
+
+::selection {
+  background: var(--sei-selection-bg);
+  color: var(--sei-selection-text);
+  text-shadow: none;
+}

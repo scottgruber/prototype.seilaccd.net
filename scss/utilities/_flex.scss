@@ -1,0 +1,26 @@
+// flex box steup
+
+.u-block--start {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--gap);
+}
+
+.u-block--end {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+
+.u-inset--start {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: var(--gap);
+}
+
+.u-inset--end {
+  display: flex;
+  flex-direction: row;
+  gap: var(--grid-gap);
+}

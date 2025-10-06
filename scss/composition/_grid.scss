@@ -1,0 +1,48 @@
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "aside"
+    "footer";
+  gap: 2rem;
+  margin-inline: 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family);
+}
+
+@media (min-width: 48em) {
+  body {
+    grid-template-areas:
+      "header header"
+      "nav nav"  
+      "main aside"
+      "main aside"
+      "footer footer";
+      align-items: start;
+  }
+
+
+}
+
+header {
+    grid-area: header;
+    margin-inline-start: var(--spacing-medium);
+  }
+
+  main {
+    grid-area: main;
+    margin-inline-start: var(--spacing-medium);
+    
+  }
+  
+    nav[role="navigation"] {
+    grid-area: nav;
+  }
+
+  aside {
+    grid-area: aside;
+    //align-self: start;
+  }

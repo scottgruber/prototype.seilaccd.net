@@ -1,0 +1,35 @@
+/* =============== */
+/* Accessible Scrollbar */
+/* =============== */
+
+/* Firefox */
+* {
+  scrollbar-width: auto;            /* or 'thin', but never 'none' */
+  scrollbar-color: var(--color-orchid-300); /* thumb / track */
+}
+
+/* WebKit (Chrome, Edge, Safari, Opera) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-orchid-600);  /* light contrast track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-orchid-300);
+  border-radius: 6px;
+  border: 3px solid var(--color-orchid-300); /* creates padding gap */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-orchid-300);
+}
+
+/* High-contrast safeguard */
+@media (forced-colors: active) {
+  * {
+    scrollbar-color: ButtonText ButtonFace;
+  }
+}

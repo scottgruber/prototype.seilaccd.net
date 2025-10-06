@@ -1,0 +1,65 @@
+/* Base table */
+table {
+  margin: var(--spacing-medium) 0;
+  width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  font-family: inherit;
+  color: var(--color-text);
+}
+
+/* Table cells */
+th,
+td {
+  padding-block: var(--spacing-small);
+  padding-inline: var(--spacing-medium);
+  font-size: var(--font-clamp-small);
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: var(--border-width-hairline) solid var(--sei-border);
+}
+
+/* Headings */
+th {
+  font-family: var(--font-family-serif);
+  font-weight: var(--font-weight-bold);
+  white-space: nowrap;
+  color: var(--color-text-strong);
+}
+
+/* First column: tighter inset */
+td:first-of-type {
+  padding-left: var(--spacing-x-small);
+}
+
+/* Remove bottom border on last row */
+tbody tr:last-of-type th,
+tbody tr:last-of-type td {
+  border-bottom-width: 0;
+}
+
+/* Condensed variant */
+.table--condensed th,
+.table--condensed td {
+  padding-top: var(--spacing-x-small);
+  padding-bottom: var(--spacing-x-small);
+}
+
+/* Responsive wrapper */
+.table--responsive {
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  vertical-align: top;
+  border-spacing: 0;
+}
+
+/* Caption styling */
+caption {
+  caption-side: bottom;
+  padding: var(--spacing-small);
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+  text-align: left;
+}
