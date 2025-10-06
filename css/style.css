@@ -366,8 +366,10 @@ body {
   font-family: var(--font-family);
 }
 
-@media (min-width: 48em) {
+@media (min-width: 80em) {
   body {
+    grid-template-columns: 3fr 1fr;
+    gap: 3rem;
     grid-template-areas: "header header" "nav nav" "main aside" "main aside" "footer footer";
     align-items: start;
   }
@@ -601,6 +603,12 @@ aside img {
   border-radius: var(--border-radius);
 }
 
+@media (max-width: 60em) {
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
 /* 1) Semantics for localized quotes */
 blockquote {
   quotes: "“" "”";
@@ -610,7 +618,7 @@ blockquote {
 blockquote {
   position: relative;
   margin-block: var(--spacing-medium);
-  margin-inline-start: 0;
+  margin-inline-start: 0.3em;
   padding-inline-start: 0;
   max-width: var(--line-length-default);
   color: var(--color-accent);
