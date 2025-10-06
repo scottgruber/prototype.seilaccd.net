@@ -1,0 +1,64 @@
+/* =============================
+   Callout: Statistics (SEI)
+   ============================= */
+
+.sei-callout__statistics {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--sei-card-bg);
+  color: var(--sei-card-text);
+  border: var(--border-width-thin) solid var(--sei-card-border);
+  border-radius: var(--border-radius);
+  margin-inline: 0.25em;
+  padding-block: var(--spacing-medium);
+  padding-inline: var(--spacing-large);
+  gap: var(--spacing-small);
+  margin-block-end: var(--spacing-medium);
+}
+
+/* Big number */
+.sei-callout__number {
+  display: block;
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  color: var(--sei-card-text); /* mapped to your orchid-200 */
+}
+
+/* Label */
+.sei-callout__body {
+  font-size: var(--font-size-0);
+  font-weight: var(--font-weight-medium);
+  color: var(--sei-card-text);
+  //letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* ===== Optional modifiers ===== */
+
+/* Accent variant (brand) */
+.sei-callout__statistics.is-accent .sei-callout__number {
+  color: var(--sei-brand);
+}
+
+/* Inverted (for dark sections) */
+.sei-callout__statistics.is-inverted {
+  background: var(--sei-surface-alt);
+  color: var(--sei-text);
+  border-color: var(--sei-border);
+}
+.sei-callout__statistics.is-inverted .sei-callout__body {
+  color: var(--sei-text-strong);
+}
+
+/* Inline row of stats */
+.sei-callout__group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-medium);
+  align-items: stretch;
+  justify-content: center;
+}

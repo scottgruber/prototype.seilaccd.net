@@ -83,6 +83,30 @@
   --spacing-medium: 1.5em;
   --spacing-large: 3em;
 
+  // /* @link https://utopia.fyi/space/calculator?c=360,16,1.25,1240,20,1.25,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,NaN */
+  --space-3xs:      clamp(0.25rem, 0.2244rem + 0.1136vw, 0.3125rem);   /* 4px → 5px */
+  --space-2xs:      clamp(0.5rem,  0.4489rem + 0.2273vw, 0.625rem);    /* 8px → 10px */
+  --space-xs:       clamp(0.75rem, 0.6733rem + 0.3409vw, 0.9375rem);   /* 12px → 15px */
+  --space-s:        clamp(1rem,    0.8977rem + 0.4545vw, 1.25rem);     /* 16px → 20px */
+  --space-m:        clamp(1.5rem,  1.3466rem + 0.6818vw, 1.875rem);    /* 24px → 30px */
+  --space-l:        clamp(2rem,    1.7955rem + 0.9091vw, 2.5rem);      /* 32px → 40px */
+  --space-xl:       clamp(3rem,    2.6932rem + 1.3636vw, 3.75rem);     /* 48px → 60px */
+  --space-2xl:      clamp(4rem,    3.5909rem + 1.8182vw, 5rem);        /* 64px → 80px */
+  --space-3xl:      clamp(6rem,    5.3864rem + 2.7273vw, 7.5rem);      /* 96px → 120px */
+
+  /* One-up pairs */
+  --space-3xs-2xs:  clamp(0.25rem, 0.0966rem + 0.6818vw, 0.625rem);    /* 4px → 10px */
+  --space-2xs-xs:   clamp(0.5rem,  0.321rem + 0.7955vw, 0.9375rem);    /* 8px → 15px */
+  --space-xs-s:     clamp(0.75rem, 0.5455rem + 0.9091vw, 1.25rem);     /* 12px → 20px */
+  --space-s-m:      clamp(1rem,    0.642rem + 1.5909vw, 1.875rem);     /* 16px → 30px */
+  --space-m-l:      clamp(1.5rem,  1.0909rem + 1.8182vw, 2.5rem);      /* 24px → 40px */
+  --space-l-xl:     clamp(2rem,    1.2841rem + 3.1818vw, 3.75rem);     /* 32px → 60px */
+  --space-xl-2xl:   clamp(3rem,    2.1818rem + 3.6364vw, 5rem);        /* 48px → 80px */
+  --space-2xl-3xl:  clamp(4rem,    2.5682rem + 6.3636vw, 7.5rem);      /* 64px → 120px */
+
+  /* Custom pairs */
+  --space-s-l:      clamp(1rem,    0.3864rem + 2.7273vw, 2.5rem);      /* 16px → 40px */
+
   --duration-immediately: 0.1s;
   --duration-instantly: 0;
   --duration-promptly: 0.5s;
@@ -251,9 +275,9 @@
   --sei-danger: var(--color-brown-300);
 
   /* Components */
-  --sei-card-bg: var(--sei-surface-elev);
-  --sei-card-border: var(--sei-border);
-  --sei-card-text: var(--sei-text);
+  --sei-card-bg: var(--color-orchid-300);
+  --sei-card-border: var(--color-orchid-100);
+  --sei-card-text: var(--color-sand-900);
 
   --sei-btn-bg: var(--color-orchid-300);
   --sei-btn-bg-hover: var(--color-orchid-200);

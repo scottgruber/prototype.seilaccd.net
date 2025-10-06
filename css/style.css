@@ -71,6 +71,26 @@
   --spacing-default: 1em;
   --spacing-medium: 1.5em;
   --spacing-large: 3em;
+  --space-3xs: clamp(0.25rem, 0.2244rem + 0.1136vw, 0.3125rem); /* 4px → 5px */
+  --space-2xs: clamp(0.5rem, 0.4489rem + 0.2273vw, 0.625rem); /* 8px → 10px */
+  --space-xs: clamp(0.75rem, 0.6733rem + 0.3409vw, 0.9375rem); /* 12px → 15px */
+  --space-s: clamp(1rem, 0.8977rem + 0.4545vw, 1.25rem); /* 16px → 20px */
+  --space-m: clamp(1.5rem, 1.3466rem + 0.6818vw, 1.875rem); /* 24px → 30px */
+  --space-l: clamp(2rem, 1.7955rem + 0.9091vw, 2.5rem); /* 32px → 40px */
+  --space-xl: clamp(3rem, 2.6932rem + 1.3636vw, 3.75rem); /* 48px → 60px */
+  --space-2xl: clamp(4rem, 3.5909rem + 1.8182vw, 5rem); /* 64px → 80px */
+  --space-3xl: clamp(6rem, 5.3864rem + 2.7273vw, 7.5rem); /* 96px → 120px */
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.25rem, 0.0966rem + 0.6818vw, 0.625rem); /* 4px → 10px */
+  --space-2xs-xs: clamp(0.5rem, 0.321rem + 0.7955vw, 0.9375rem); /* 8px → 15px */
+  --space-xs-s: clamp(0.75rem, 0.5455rem + 0.9091vw, 1.25rem); /* 12px → 20px */
+  --space-s-m: clamp(1rem, 0.642rem + 1.5909vw, 1.875rem); /* 16px → 30px */
+  --space-m-l: clamp(1.5rem, 1.0909rem + 1.8182vw, 2.5rem); /* 24px → 40px */
+  --space-l-xl: clamp(2rem, 1.2841rem + 3.1818vw, 3.75rem); /* 32px → 60px */
+  --space-xl-2xl: clamp(3rem, 2.1818rem + 3.6364vw, 5rem); /* 48px → 80px */
+  --space-2xl-3xl: clamp(4rem, 2.5682rem + 6.3636vw, 7.5rem); /* 64px → 120px */
+  /* Custom pairs */
+  --space-s-l: clamp(1rem, 0.3864rem + 2.7273vw, 2.5rem); /* 16px → 40px */
   --duration-immediately: 0.1s;
   --duration-instantly: 0;
   --duration-promptly: 0.5s;
@@ -223,9 +243,9 @@
   --sei-warn: var(--color-yellow-500);
   --sei-danger: var(--color-brown-300);
   /* Components */
-  --sei-card-bg: var(--sei-surface-elev);
-  --sei-card-border: var(--sei-border);
-  --sei-card-text: var(--sei-text);
+  --sei-card-bg: var(--color-orchid-300);
+  --sei-card-border: var(--color-orchid-100);
+  --sei-card-text: var(--color-sand-900);
   --sei-btn-bg: var(--color-orchid-300);
   --sei-btn-bg-hover: var(--color-orchid-200);
   --sei-btn-text: white;
@@ -863,6 +883,69 @@ a.btn {
     transform: none;
   }
 }
+/* =============================
+   Callout: Statistics (SEI)
+   ============================= */
+.sei-callout__statistics {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--sei-card-bg);
+  color: var(--sei-card-text);
+  border: var(--border-width-thin) solid var(--sei-card-border);
+  border-radius: var(--border-radius);
+  margin-inline: 0.25em;
+  padding-block: var(--spacing-medium);
+  padding-inline: var(--spacing-large);
+  gap: var(--spacing-small);
+  margin-block-end: var(--spacing-medium);
+}
+
+/* Big number */
+.sei-callout__number {
+  display: block;
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  color: var(--sei-card-text); /* mapped to your orchid-200 */
+}
+
+/* Label */
+.sei-callout__body {
+  font-size: var(--font-size-0);
+  font-weight: var(--font-weight-medium);
+  color: var(--sei-card-text);
+  text-transform: uppercase;
+}
+
+/* ===== Optional modifiers ===== */
+/* Accent variant (brand) */
+.sei-callout__statistics.is-accent .sei-callout__number {
+  color: var(--sei-brand);
+}
+
+/* Inverted (for dark sections) */
+.sei-callout__statistics.is-inverted {
+  background: var(--sei-surface-alt);
+  color: var(--sei-text);
+  border-color: var(--sei-border);
+}
+
+.sei-callout__statistics.is-inverted .sei-callout__body {
+  color: var(--sei-text-strong);
+}
+
+/* Inline row of stats */
+.sei-callout__group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-medium);
+  align-items: stretch;
+  justify-content: center;
+}
+
 /* Figures */
 figure {
   margin: 0 0 var(--spacing-large);
