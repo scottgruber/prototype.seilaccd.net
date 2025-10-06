@@ -1,144 +1,42 @@
-// button, input, label {
-//   line-height: 1.1;
-// }
+button, input, label {
+  line-height: 1.1;
+}
 
-// /* Inherit typography */
-// input,
-// button,
-// textarea,
-// select {
-//   font: inherit;
-//   color: var(--color-text);
-// }
+/* Inherit typography */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: var(--color-text);
+}
 
-// /* Text inputs */
-// input,
-// textarea,
-// select {
-//   background: var(--sei-input-bg);
-//   color: var(--sei-input-text);
-//   border: 1px solid var(--sei-input-border);
-//   border-radius: var(--border-radius);
-//   padding: var(--spacing-default);
-// }
+/* Text inputs */
+input,
+textarea,
+select {
+  background: var(--sei-input-bg);
+  color: var(--sei-input-text);
+  border: 1px solid var(--sei-input-border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-default);
+}
 
-// input::placeholder,
-// textarea::placeholder {
-//   color: var(--sei-input-placeholder);
-// }
+input::placeholder,
+textarea::placeholder {
+  color: var(--sei-input-placeholder);
+}
 
-// /* Focus ring (all controls) */
-// input:focus-visible,
-// textarea:focus-visible,
-// select:focus-visible,
-// button:focus-visible,
-// a.sei-btn:focus-visible,
-// a.button:focus-visible {
-//   outline: 3px solid var(--sei-outline);
-//   outline-offset: 2px;
-// }
-
-// /* -----------------------------
-//    Buttons (semantic + anchor)
-//    ----------------------------- */
+/* Focus ring (all controls) */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+button:focus-visible,
+a.sei-btn:focus-visible,
+a.button:focus-visible {
+  outline: 3px solid var(--sei-outline);
+  outline-offset: 2px;
+}
 
 
 
-// /* Base button class */
-// .sei-btn,
-// .button,
-// button {
-//   display: inline-flex;
-//   align-items: center;
-//   justify-content: center;
-
-//   margin: var(--spacing-default);
-//   padding-block: var(--spacing-small);
-//   padding-inline: var(--spacing-default);
-//   border: 1px solid var(--sei-btn-border);
-//   background: var(--sei-btn-bg);
-//   color: var(--sei-btn-text);
-//   cursor: pointer;
-
-//   font-size: var(--font-size-default);
-//   font-weight: var(--font-weight-bold);
-//   text-decoration: none;
-// }
-
-// /* Anchor button should behave like a button */
-// a.sei-btn,
-// a.button {
-//   display: inline-flex;
-  
-// }
-
-// /* States */
-// .sei-btn:hover,
-// .button:hover,
-// button:hover {
-//   background: var(--sei-btn-bg-hover);
-//   color: var(--sei-btn-text);
-//   text-decoration: none;
-// }
-
-// .sei-btn:active,
-// .button:active,
-// button:active {
-//   transform: translateY(0.5px); /* subtle press */
-// }
-
-// /* Disabled */
-// .sei-btn[disabled],
-// .button[disabled],
-// button:disabled,
-// a.sei-btn.is-disabled,
-// a.button.is-disabled {
-//   opacity: 0.55;
-//   cursor: not-allowed;
-//   pointer-events: none;
-// }
-
-// /* Link states for anchor buttons */
-// a.sei-btn:link,
-// a.button:link,
-// a.sei-btn:visited,
-// a.button:visited {
-//   color: var(--sei-btn-text);
-//   text-decoration: none;
-// }
-
-// /* -----------------------------
-//    Button Group
-//    ----------------------------- */
-
-// .c-button-group {
-//   display: flex;
-//   flex-direction: column;
-//   flex-wrap: wrap;
-//   gap: 0.75rem;              /* replace per-child margins */
-//   text-transform: uppercase;
-// }
-// .c-button-group ul::marker,
-// .c-button-group li::marker {
-//    content: ''; 
-// }
-
-// ul.c-button-group li a {
-//   border: 2px solid var(--sei-btn-border);
-//   list-style: none;
-// }
-
-// /* Wider screens: row layout */
-// @media (min-width: 48em) {
-//   .c-button-group {
-//     flex-direction: row;
-//     justify-content: flex-start;
-//   }
-// }
-
-// /* If you still need spacing inside the group for non-buttons */
-// .c-button-group > * {
-//   /* gap handles spacing; keep minimal padding for non-button items */
-//   padding: 0.25em 0;
-  
-// }

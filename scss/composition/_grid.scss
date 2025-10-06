@@ -17,32 +17,32 @@ body {
   body {
     grid-template-areas:
       "header header"
-      "nav nav"  
+      "nav nav"
       "main aside"
       "main aside"
       "footer footer";
-      align-items: start;
+    align-items: start;
   }
 
 
 }
 
 header {
-    grid-area: header;
-    margin-inline-start: var(--spacing-medium);
-  }
+  grid-area: header;
+  margin-inline-start: var(--spacing-medium);
+}
 
-  main {
-    grid-area: main;
-    margin-inline-start: var(--spacing-medium);
-    
-  }
-  
-    nav[role="navigation"] {
-    grid-area: nav;
-  }
+main {
+  grid-area: main;
+  margin-inline-start: var(--spacing-medium);
 
-  aside {
-    grid-area: aside;
-    //align-self: start;
-  }
+}
+
+nav[role="navigation"] {
+  grid-area: nav;
+}
+
+aside {
+  grid-area: aside;
+  margin-inline-start: var(--spacing-medium);
+}

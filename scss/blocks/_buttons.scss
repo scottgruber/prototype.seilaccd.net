@@ -1,0 +1,152 @@
+/* -----------------------------
+   Button Group (container-agnostic)
+   ----------------------------- */
+.c-button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  flex-direction: column;                 /* stack on narrow */
+  align-items: start;                     /* avoid stretch unless wanted */
+}
+
+/* If the group is a list, normalize it */
+.c-button-group:where(ul, ol) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Optional: uppercase variant instead of forcing it globally */
+.c-button-group--caps { text-transform: uppercase; }
+
+/* Keep small inner padding only for non-button stray content (rare) */
+.c-button-group > :not(.btn) { padding: 0.25em 0; }
+
+/* Row on wider screens */
+@media (min-width: 48em) {
+  .c-button-group { flex-direction: row; justify-content: flex-start; }
+}
+
+/* Optional utilities */
+.c-button-group--stretch > .btn { inline-size: 100%; }   /* full-width items when stacked */
+
+/* Core button (use .btn on <button>, <a>, <input>) */
+.btn,
+:where(button, [type="button"], [type="submit"], [type="reset"]).btn,
+:where(a.btn) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--btn-gap);
+  inline-size: auto;
+
+  padding-block: var(--btn-pad-block);
+  padding-inline: var(--btn-pad-inline);
+  border: 1px solid var(--btn-border);
+  border-radius: var(--btn-radius);
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  text-decoration: none;
+  font: inherit;
+  font-weight: var(--font-weight-bold, 600);
+  line-height: 1.1;
+  cursor: pointer;
+  margin: 0;
+}
+
+.btn:hover { background: var(--btn-bg-hover); text-decoration: none; }
+.btn:active { transform: translateY(0.5px); }
+.btn:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+
+.btn:disabled,
+.btn[disabled],
+.btn[aria-disabled="true"],
+.btn.is-disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+  transform: none;
+}
+
+a.btn { display: inline-flex; }
+
+// a.btn:link,
+// a.btn:visited {
+//   color: var(--btn-text);
+//   text-decoration: none;
+// }
+
+.btn:any-link {
+  color: var(--btn-text);
+  text-decoration: none;
+}
+
+.btn > :where(svg, i, .icon) + :where(span, em, strong) { margin-inline-start: 0.4em; }
+
+/* Keep your originals if you want… */
+.btn--primary {
+  --btn-bg: var(--sei-btn-primary-bg, ButtonFace);
+  --btn-bg-hover: var(--sei-btn-primary-bg-hover, color-mix(in srgb, var(--btn-bg) 85%, black));
+  --btn-text: var(--sei-btn-primary-text, ButtonText);
+  --btn-border: var(--sei-btn-primary-border, transparent);
+}
+
+.btn--outline {
+  --btn-bg: transparent;
+  --btn-bg-hover: color-mix(in srgb, currentColor 10%, transparent);
+  --btn-text: currentColor;
+  --btn-border: currentColor;
+}
+
+.btn--ghost {
+  --btn-bg: transparent;
+  --btn-bg-hover: color-mix(in srgb, currentColor 8%, transparent);
+  --btn-border: transparent;
+}
+
+/* …or use accent-based variants */
+// .btn--accent {
+//   --btn-bg: var(--color-accent);
+//   --btn-bg-hover: var(--color-accent-hover);
+//   //--btn-text: var(--color-accent-contrast);
+//   --btn-text: var(--color-text);
+//   --btn-border: var(--color-accent);
+// }
+
+.btn--sm { padding-block: calc(var(--btn-pad-block) * 0.75); padding-inline: calc(var(--btn-pad-inline) * 0.8); font-size: 0.9em; }
+.btn--lg { padding-block: calc(var(--btn-pad-block) * 1.2);  padding-inline: calc(var(--btn-pad-inline) * 1.2); font-size: 1.05em; }
+.btn--block { inline-size: 100%; }
+
+/* -----------------------------
+   Button hover animation
+   ----------------------------- */
+.btn {
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.15s ease;
+}
+
+.btn:hover {
+  background: var(--btn-bg-hover);
+  color: var(--btn-text);
+  transform: translateY(-1px);      /* gentle lift */
+  box-shadow: 0 2px 6px color-mix(in srgb, var(--btn-border) 25%, transparent);
+}
+
+.btn:active {
+  transform: translateY(0);         /* reset when pressed */
+  box-shadow: 0 1px 3px color-mix(in srgb, var(--btn-border) 30%, transparent);
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .btn { transition: none; }
+  .btn:hover, .btn:active { transform: none; box-shadow: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn { transition: none; }
+  .btn:active { transform: none; }
+}

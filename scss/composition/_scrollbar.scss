@@ -5,7 +5,7 @@
 /* Firefox */
 * {
   scrollbar-width: auto;            /* or 'thin', but never 'none' */
-  scrollbar-color: var(--color-orchid-300); /* thumb / track */
+  scrollbar-color: var(--color-orchid-200); /* thumb / track */
 }
 
 /* WebKit (Chrome, Edge, Safari, Opera) */
@@ -18,9 +18,9 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--color-orchid-300);
+  background-color: var(--color-orchid-400);
   border-radius: 6px;
-  border: 3px solid var(--color-orchid-300); /* creates padding gap */
+  border: 3px solid var(--color-orchid-400); /* creates padding gap */
 }
 
 ::-webkit-scrollbar-thumb:hover {
