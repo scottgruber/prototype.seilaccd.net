@@ -7,7 +7,8 @@ blockquote {
 blockquote {
   position: relative;
   margin-block: var(--spacing-medium);
-  margin-inline-start: var(--spacing-default);        
+  margin-inline-start: 0;
+  padding-inline-start: 0;     
   max-width: var(--line-length-default);
   color: var(--color-accent);
   font-size: var(--font-size-2);
@@ -21,8 +22,8 @@ blockquote {
 blockquote::before {
   content: open-quote;                /* locale-friendly */
   position: absolute;
-  inset-block-start: 0;               /* top:0 (logical) */
-  inset-inline-start: -0.1em;         /* hang into gutter */
+  inset-block-start: -0.4em; /* move slightly above first line */
+  inset-inline-start: 0;     /* flush to left edge */
   transform: translateY(-0.05em);     /* tiny optical nudge */
   font-size: var(--font-size-6);                     /* scales with blockquote font-size */
   line-height: 1;
