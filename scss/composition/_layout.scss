@@ -1,0 +1,21 @@
+/* Button styling */
+.btn-theme {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.25rem;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.btn-theme:hover {
+  transform: scale(1.1);
+}

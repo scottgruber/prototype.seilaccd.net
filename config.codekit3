@@ -61,6 +61,14 @@
       "oAP" : "\/css\/style.css.map",
       "oF" : 0
     },
+    "\/demonstration-project.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/demonstration-project.html",
+      "oF" : 0
+    },
     "\/fonts-with-samples.html" : {
       "cB" : 0,
       "ft" : 8192,

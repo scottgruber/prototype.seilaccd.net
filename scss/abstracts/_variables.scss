@@ -289,11 +289,12 @@
 
   /* optional focus */
   --focus-ring: Highlight;
+  
 }
 
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root  {
     --color-brand: var(--color-green-600);
     --color-text: var(--color-sand-900);
     --color-background: var(--color-green-200);
@@ -306,6 +307,21 @@
     --sei-link-active: var(--sei-link);
     --sei-link-underline: var(--sei-link);
   }
+  
+}
+
+:root[data-theme="dark"]  {
+    --color-brand: var(--color-green-600);
+    --color-text: var(--color-sand-900);
+    --color-background: var(--color-green-200);
+    --color-accent: var(--color-yellow-700);
+    --color-laccd-logo: var(--color-sand-900);
+
+    --sei-link: var(--color-yellow-900);
+    --sei-link-visited: var(--color-yellow-900);
+    --sei-link-hover: var(--color-blue-900);
+    --sei-link-active: var(--sei-link);
+    --sei-link-underline: var(--sei-link);
 }
 
 @viewport {

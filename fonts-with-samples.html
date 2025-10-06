@@ -64,13 +64,13 @@
   
     <p style="font-size: var(--font-size-3)">Step 3 (min: 35.1563px / max: 39.0625px)</p>
   
-    <p style="font-size: var(--font-size-4)">Step 4 (min: 43.9453px / max: 48.8281px)</p>
+    <p style="font-size: var(--font-size-4)" class="bold u-block-margin-0">Step 4 (min: 43.9453px / max: 48.8281px)</p>
   
-    <p style="font-size: var(--font-size-5)">Step 5 (min: 54.9316px / max: 61.0352px)</p>
+    <p style="font-size: var(--font-size-5)" class="bold u-block-margin-0">Step 5 (min: 54.9316px / max: 61.0352px)</p>
   
-    <p style="font-size: var(--font-size-6)">Step 6 (min: 68.6646px / max: 76.2939px)</p>
+    <p style="font-size: var(--font-size-6)" class="bold u-block-margin-0">Step 6 (min: 68.6646px / max: 76.2939px)</p>
   
-    <p style="font-size: var(--font-size-7)">Step 7 (min: 85.8307px / max: 95.3674px)</p>
+    <p style="font-size: var(--font-size-7)" class="bold u-block-margin-0">Step 7 (min: 85.8307px / max: 95.3674px)</p>
       <section class="type-sheet">
 
 
@@ -175,16 +175,44 @@
     
     <footer>
       <ul>
-        <li><a href="sei-beth-xiao-synopsis.html">Beth and Xiao Synopsis</a></li>
+        <li><a href="sei-beth-xiao-synopsis.html">What SEI Does and Why It Matters</a></li>
         <li><a href="sei-proposed-navigation.html">SEI Proposed Navigation</a></li>
+        <li><a href="demonstration-project.html">Demonstration Project Sample</a></li>
         <li><a href="colors.html">Colors</a></li>
         <li><a href="fonts-with-samples.html">Fonts</a></li>
         <li><a href="icons.html">Icons</a></li>
         <li><a href="styleguide.html">Styleguide</a></li>
       </ul>
       <small>&copy; Sustainable Environment Institute, Los Angeles Community College District</small>
+      <button id="theme-toggle" class="btn-theme" aria-label="Toggle dark mode">
+      <span class="icon">🌙</span>
+    </button>
     </footer>
     
+    <script>
+      const toggle = document.getElementById('theme-toggle');
+      const root = document.documentElement;
+    
+      // Apply saved theme on load
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) root.setAttribute('data-theme', savedTheme);
+    
+      // Update icon
+      function updateIcon() {
+        toggle.querySelector('.icon').textContent =
+          root.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
+      }
+      updateIcon();
+    
+      // Toggle theme on click
+      toggle.addEventListener('click', () => {
+        const current = root.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        updateIcon();
+      });
+    </script>
   </body>
 
 </html>
