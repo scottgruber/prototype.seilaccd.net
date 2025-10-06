@@ -1,1 +1,29 @@
+# Files & Directories #
+###############################
+.htaccess
+.htpasswd
+node_modules/
+.well-known/
+
+# Local IDE #
+###############################
+.config.codekit3
+config.codekit3
+/.nova
+
+
+# OS generated files #
+##############################
 .DS_Store
+.DS_Store?
+._*
+*.swp
+*.swo
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.pid
+*.ipc
+
+/nginx.conf
