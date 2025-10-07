@@ -25,14 +25,6 @@
       "oAP" : "\/CNAME",
       "oF" : 0
     },
-    "\/colors.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/colors.html",
-      "oF" : 0
-    },
     "\/colors.kit" : {
       "cB" : 0,
       "ft" : 2048,
@@ -93,20 +85,604 @@
       "oAP" : "\/fonts-with-samples.html",
       "oF" : 0
     },
-    "\/fonts\/TofinoTextVariable.ttf" : {
+    "\/fonts\/PT_Sans\/OFL.txt" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/fonts\/TofinoTextVariable.ttf",
+      "oAP" : "\/fonts\/PT_Sans\/OFL.txt",
       "oF" : 0
     },
-    "\/fonts\/TofinoVariable.ttf" : {
+    "\/fonts\/PT_Sans\/PTSans-Bold.ttf" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/fonts\/TofinoVariable.ttf",
+      "oAP" : "\/fonts\/PT_Sans\/PTSans-Bold.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/PT_Sans\/PTSans-BoldItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/PT_Sans\/PTSans-BoldItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/PT_Sans\/PTSans-Italic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/PT_Sans\/PTSans-Italic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/PT_Sans\/PTSans-Regular.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/PT_Sans\/PTSans-Regular.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto_Slab\/LICENSE.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto_Slab\/LICENSE.txt",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto_Slab\/README.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto_Slab\/README.txt",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto_Slab\/RobotoSlab-VariableFont_wght.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto_Slab\/RobotoSlab-VariableFont_wght.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto_Slab\/static\/RobotoSlab-Black.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto_Slab\/static\/RobotoSlab-Black.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto_Slab\/static\/RobotoSlab-Bold.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto_Slab\/static\/RobotoSlab-Bold.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto_Slab\/static\/RobotoSlab-ExtraBold.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto_Slab\/static\/RobotoSlab-ExtraBold.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto_Slab\/static\/RobotoSlab-ExtraLight.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto_Slab\/static\/RobotoSlab-ExtraLight.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto_Slab\/static\/RobotoSlab-Light.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto_Slab\/static\/RobotoSlab-Light.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto_Slab\/static\/RobotoSlab-Medium.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto_Slab\/static\/RobotoSlab-Medium.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto_Slab\/static\/RobotoSlab-Regular.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto_Slab\/static\/RobotoSlab-Regular.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto_Slab\/static\/RobotoSlab-SemiBold.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto_Slab\/static\/RobotoSlab-SemiBold.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto_Slab\/static\/RobotoSlab-Thin.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto_Slab\/static\/RobotoSlab-Thin.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/OFL.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/OFL.txt",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/README.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/README.txt",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/Roboto-Italic-VariableFont_wdth,wght.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/Roboto-Italic-VariableFont_wdth,wght.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/Roboto-VariableFont_wdth,wght.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/Roboto-VariableFont_wdth,wght.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_Condensed-Black.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_Condensed-Black.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_Condensed-BlackItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_Condensed-BlackItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_Condensed-Bold.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_Condensed-Bold.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_Condensed-BoldItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_Condensed-BoldItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_Condensed-ExtraBold.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_Condensed-ExtraBold.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_Condensed-ExtraBoldItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_Condensed-ExtraBoldItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_Condensed-ExtraLight.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_Condensed-ExtraLight.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_Condensed-ExtraLightItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_Condensed-ExtraLightItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_Condensed-Italic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_Condensed-Italic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_Condensed-Light.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_Condensed-Light.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_Condensed-LightItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_Condensed-LightItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_Condensed-Medium.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_Condensed-Medium.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_Condensed-MediumItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_Condensed-MediumItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_Condensed-Regular.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_Condensed-Regular.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_Condensed-SemiBold.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_Condensed-SemiBold.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_Condensed-SemiBoldItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_Condensed-SemiBoldItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_Condensed-Thin.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_Condensed-Thin.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_Condensed-ThinItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_Condensed-ThinItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-Black.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-Black.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-BlackItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-BlackItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-Bold.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-Bold.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-BoldItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-BoldItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-ExtraBold.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-ExtraBold.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-ExtraBoldItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-ExtraBoldItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-ExtraLight.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-ExtraLight.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-ExtraLightItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-ExtraLightItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-Italic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-Italic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-Light.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-Light.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-LightItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-LightItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-Medium.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-Medium.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-MediumItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-MediumItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-Regular.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-Regular.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-SemiBold.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-SemiBold.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-SemiBoldItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-SemiBoldItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-Thin.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-Thin.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-ThinItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto_SemiCondensed-ThinItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto-Black.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto-Black.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto-BlackItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto-BlackItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto-Bold.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto-Bold.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto-BoldItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto-BoldItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto-ExtraBold.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto-ExtraBold.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto-ExtraBoldItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto-ExtraBoldItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto-ExtraLight.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto-ExtraLight.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto-ExtraLightItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto-ExtraLightItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto-Italic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto-Italic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto-Light.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto-Light.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto-LightItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto-LightItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto-Medium.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto-Medium.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto-MediumItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto-MediumItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto-Regular.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto-Regular.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto-SemiBold.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto-SemiBold.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto-SemiBoldItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto-SemiBoldItalic.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto-Thin.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto-Thin.ttf",
+      "oF" : 0
+    },
+    "\/fonts\/Roboto\/static\/Roboto-ThinItalic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/Roboto\/static\/Roboto-ThinItalic.ttf",
       "oF" : 0
     },
     "\/icons.html" : {
@@ -193,6 +769,14 @@
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/partials\/_footer.html",
+      "oF" : 0
+    },
+    "\/partials\/_head.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/partials\/_head.html",
       "oF" : 0
     },
     "\/partials\/_header.kit" : {
