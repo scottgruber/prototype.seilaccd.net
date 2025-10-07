@@ -25,6 +25,14 @@
       "oAP" : "\/CNAME",
       "oF" : 0
     },
+    "\/colors.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/colors.html",
+      "oF" : 0
+    },
     "\/colors.kit" : {
       "cB" : 0,
       "ft" : 2048,
@@ -747,6 +755,38 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/index-roboto-slab.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/index-roboto-slab.html",
+      "oF" : 0
+    },
+    "\/index-roboto-slab.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/index-roboto-slab.html",
+      "oF" : 0
+    },
+    "\/index-roboto.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/index-roboto.html",
+      "oF" : 0
+    },
+    "\/index-roboto.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/index-roboto.html",
+      "oF" : 0
+    },
     "\/index.html" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1061,6 +1101,19 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/scss\/blocks\/_tables.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0
+    },
+    "\/scss\/composition\/_global.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/scss\/composition\/_global.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0

@@ -6,6 +6,7 @@
 
 // CUBE CSS layers (from broad to specific)
 @use 'composition/reset';
+@use 'composition/global';
 @use 'composition/grid';
 @use 'composition/layout';
 @use 'composition/page';
