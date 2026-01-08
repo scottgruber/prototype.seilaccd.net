@@ -3,12 +3,9 @@
 
   <head>
       <meta charset="utf-8" />
-      <title>Sustainable Environment Institute</title>
+      <title>Prototype — Sustainable Environment Institute</title>
       <meta name="description" content="Prototype for the Sustainable Environment Institute at LA Community College District" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="css/style.css" />
     </head>
 
@@ -122,19 +119,36 @@
         their neighborhoods and futures.
       </p>
 
-      <!-- <p>
-        <img
-             alt="Gold Creek Field Station landscape"
-             src="https://placehold.co/800x450/00527d/f5f5e8"
-             title="Gold Creek Field Station, an outdoor learning site."
-             width="800"
-             height="450" />
-      </p> -->
 
       <p>
         Our Gold Creek Field Station is a living classroom where students engage in biodiversity monitoring, water quality studies, and restoration
         projects—connecting theory to practice.
       </p>
+
+      <h2 id="cards">Cards</h2>
+      <p>Cards use the LACCD palette and adapt automatically for dark mode via the site’s data-theme setup. The second example forces the dark treatment even when
+        the page is light.</p>
+      <div class="card-grid">
+        <article class="card card--light">
+          <p class="card__eyebrow">Faculty spotlight</p>
+          <h3 class="card__title">Teaching for a livable future</h3>
+          <p class="card__desc">Embed climate action into your syllabus with ready-to-teach modules, community partners, and lab activities aligned to LACCD
+            outcomes.</p>
+          <div class="card__footer">
+            <span class="card__meta">Sunbeam-ready</span>
+            <a class="card__cta" href="#">View modules</a>
+          </div>
+        </article>
+        <article class="card card--dark">
+          <p class="card__eyebrow">Student projects</p>
+          <h3 class="card__title">Hands-on fieldwork</h3>
+          <p class="card__desc">Students map biodiversity, monitor water quality, and publish findings with mentors across our nine colleges.</p>
+          <div class="card__footer">
+            <span class="card__meta">Night-safe contrast</span>
+            <a class="card__cta" href="#">See examples</a>
+          </div>
+        </article>
+      </div>
 
       <h2>Images</h2>
       <figure>
@@ -202,6 +216,7 @@
         <cite>Jordan Kim, Demo Faculty</cite>
       </blockquote>
 
+      
 
       <h1 id="tables">Tables</h1>
 
@@ -345,15 +360,13 @@
 
     <footer>
       <ul>
-        <li><a href="sei-beth-xiao-synopsis.html">What SEI Does and Why It Matters</a></li>
-        <li><a href="sei-proposed-navigation.html">SEI Proposed Navigation</a></li>
-        <li><a href="demonstration-project.html">Demonstration Project Sample</a></li>
+        <li><a href="synopsis.html">What SEI Does and Why It Matters</a></li>
+        <li><a href="pages.html">SEI Proposed Navigation</a></li>
+        <li><a href="project.html">Demonstration Project Sample</a></li>
         <li><a href="colors.html">Colors</a></li>
-        <li><a href="icons.html">Icons</a></li>
+        <li><a href="palette.html">Palette</a></li>
+        <li><a href="font.html">Font</a></li>
         <li><a href="styleguide.html">Styleguide</a></li>
-        <li><a href="fonts-with-samples.html">Font PT Sans</a></li>
-        <li><a href="index-roboto.html">Roboto</a></li>
-        <li><a href="index-roboto-slab.html">Roboto Slab</a></li>
       </ul>
       <small>&copy; Sustainable Environment Institute, Los Angeles Community College District</small>
       <button id="theme-toggle" class="btn-theme" aria-label="Toggle dark mode">

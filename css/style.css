@@ -1,5 +1,27 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "InterVariable";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/inter/InterVariable.woff2") format("woff2");
+}
+@font-face {
+  font-family: "InterVariable";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/inter/InterVariable-Italic.woff2") format("woff2");
+}
 :root {
+  --font-family: InterVariable, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* Typography behavior tokens */
+  --font-optical-sizing: auto;
+  --font-numeric-default: lining-nums tabular-nums;
+  --font-numeric-oldstyle: oldstyle-nums proportional-nums;
+  --font-numeric-data: lining-nums tabular-nums slashed-zero;
+  /* Optional: add one for normal (reset) */
+  --font-numeric-none: normal;
   /* https://utopia.fyi/type/calculator?c=360,16,1.25,1240,20,1.25,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
   --font-size--2: clamp(0.72rem, 0.6873rem + 0.1455vw, 0.8rem);
   /* Step -2: 11.52px → 12.8px  */
@@ -21,15 +43,9 @@
   /* Step  6: 68.6646px→ 76.2939px*/
   --font-size-7: clamp(5.3644rem, 5.1206rem + 1.0837vw, 5.9605rem);
   /* Step  7: 85.8307px→ 95.3674px*/
-  --tracking-tight: -0.01em;
-  --tracking-normal: 0em;
+  --tracking-tight: -0.03em;
+  --tracking-normal: -0.015em;
   --tracking-wide: 0.05em;
-  --font-family: "PT Sans", sans-serif;
-  --font-family-display: "PT Sans", sans-serif;
-  --font-family-system: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-family-slab: "Roboto Slab", serif;
-  --font-family-roboto: "Roboto", sans-serif;
   --font-size-6: 4.209rem;
   --font-size-xx-large: 3.157rem;
   --font-size-x-large: 2.369rem;
@@ -98,6 +114,26 @@
   --duration-promptly: 0.5s;
   --duration-quickly: 0.2s;
   --duration-slowly: 1s;
+  /* LACCD official palette (source: json/LACCD.json) */
+  --laccd-black: #000000;
+  --laccd-green-dark: #32673d;
+  --laccd-green: #5f9a3f;
+  --laccd-green-light: #a0cd81;
+  --laccd-blue-dark: #1c4993;
+  --laccd-blue: #4ba8c3;
+  --laccd-blue-light: #81cce7;
+  --laccd-orange: #ec8544;
+  --laccd-sand: #f4d698;
+  --laccd-sunbeam: #e9bf5e;
+  /* Palette-derived basics */
+  --laccd-surface: #ffffff;
+  --laccd-surface-alt: color-mix(in srgb, var(--laccd-sand) 70%, white);
+  --laccd-surface-elev: color-mix(in srgb, var(--laccd-sand) 50%, white);
+  --laccd-text: var(--laccd-black);
+  --laccd-text-strong: color-mix(in srgb, var(--laccd-black) 90%, var(--laccd-blue-dark) 10%);
+  --laccd-text-muted: color-mix(in srgb, var(--laccd-black) 55%, white);
+  --laccd-border: color-mix(in srgb, var(--laccd-blue-dark) 35%, black);
+  --laccd-outline: var(--laccd-blue);
   /* Sand tonal scale (base color at 800) */
   --color-sand-100: hsl(24, 17%, 22%);
   /* #3c322d */
@@ -212,53 +248,53 @@
   /* #fcf2cf */
   --color-yellow-900: hsl(47, 89%, 95%);
   /* #fef9e7 */
-  --color-laccd-logo: #005a97;
+  --color-laccd-logo: var(--laccd-blue-dark);
   /* Core surfaces & text */
-  --sei-surface: var(--color-paper);
+  --sei-surface: var(--laccd-surface);
   /* page background */
-  --sei-surface-alt: var(--color-sand-900);
+  --sei-surface-alt: var(--laccd-surface-alt);
   /* subtle panels */
-  --sei-surface-elev: var(--color-sand-800);
+  --sei-surface-elev: var(--laccd-surface-elev);
   /* cards */
-  --sei-border: var(--color-brown-300);
-  --sei-outline: var(--color-blue-500);
+  --sei-border: var(--laccd-border);
+  --sei-outline: var(--laccd-outline);
   /* focus ring */
-  --sei-text: var(--color-brown-100);
+  --sei-text: var(--laccd-text);
   /* default body text */
-  --sei-text-strong: var(--color-brown-300);
-  --sei-text-muted: var(--color-sand-500);
+  --sei-text-strong: var(--laccd-text-strong);
+  --sei-text-muted: var(--laccd-text-muted);
   /* Brand & accents */
-  --sei-brand: var(--color-green-400);
-  --sei-brand-strong: var(--color-green-600);
-  --sei-accent: var(--color-blue-500);
-  --sei-accent-strong: var(--color-blue-600);
-  --sei-highlight: var(--color-orchid-500);
+  --sei-brand: var(--laccd-blue-dark);
+  --sei-brand-strong: var(--laccd-blue);
+  --sei-accent: var(--laccd-orange);
+  --sei-accent-strong: color-mix(in srgb, var(--laccd-orange) 85%, black);
+  --sei-highlight: var(--laccd-sunbeam);
   /* Links */
   --sei-link: var(--sei-brand);
-  --sei-link-visited: var(--color-orchid-300);
-  --sei-link-hover: var(--color-orchid-100);
+  --sei-link-visited: var(--color-orchid-100);
+  --sei-link-hover: var(--laccd-blue);
   --sei-link-active: var(--sei-link);
   --sei-link-underline: var(--sei-link);
   /* Feedback */
-  --sei-info: var(--color-blue-500);
-  --sei-success: var(--color-green-600);
-  --sei-warn: var(--color-yellow-500);
-  --sei-danger: var(--color-brown-300);
+  --sei-info: var(--laccd-blue);
+  --sei-success: var(--laccd-green);
+  --sei-warn: var(--laccd-sunbeam);
+  --sei-danger: color-mix(in srgb, var(--laccd-orange) 50%, var(--laccd-black));
   /* Components */
-  --sei-card-bg: var(--color-orchid-300);
-  --sei-card-border: var(--color-orchid-100);
-  --sei-card-text: var(--color-sand-900);
-  --sei-btn-bg: var(--color-orchid-300);
-  --sei-btn-bg-hover: var(--color-orchid-200);
+  --sei-card-bg: color-mix(in srgb, var(--laccd-blue-light) 40%, white);
+  --sei-card-border: var(--laccd-blue-light);
+  --sei-card-text: var(--laccd-text);
+  --sei-btn-bg: var(--laccd-blue-dark);
+  --sei-btn-bg-hover: var(--laccd-blue);
   --sei-btn-text: white;
-  --sei-btn-border: var(--color-orchid-100);
+  --sei-btn-border: var(--laccd-blue-dark);
   --sei-input-bg: white;
   --sei-input-border: var(--sei-border);
-  --sei-input-text: var(--sei-text);
-  --sei-input-placeholder: var(--sei-text-muted);
+  --sei-input-text: var(--laccd-text);
+  --sei-input-placeholder: var(--laccd-text-muted);
   /* Selection */
-  --sei-selection-bg: var(--color-orchid-300);
-  --sei-selection-text: white;
+  --sei-selection-bg: var(--laccd-blue-light);
+  --sei-selection-text: var(--laccd-text);
   --color-brand: var(--sei-brand);
   --color-text: var(--sei-text);
   --color-background: var(--sei-surface);
@@ -280,27 +316,27 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-brand: var(--color-green-600);
-    --color-text: var(--color-sand-900);
-    --color-background: var(--color-green-200);
-    --color-accent: var(--color-yellow-700);
-    --color-laccd-logo: var(--color-sand-900);
-    --sei-link: var(--color-yellow-900);
-    --sei-link-visited: var(--color-yellow-900);
-    --sei-link-hover: var(--color-blue-900);
+    --color-brand: var(--laccd-blue);
+    --color-text: color-mix(in srgb, white 92%, var(--laccd-blue-dark) 8%);
+    --color-background: color-mix(in srgb, var(--laccd-blue-dark) 25%, black);
+    --color-accent: var(--laccd-sunbeam);
+    --color-laccd-logo: var(--laccd-blue-light);
+    --sei-link: var(--laccd-blue-light);
+    --sei-link-visited: color-mix(in srgb, var(--laccd-blue-light) 70%, white);
+    --sei-link-hover: var(--laccd-sunbeam);
     --sei-link-active: var(--sei-link);
     --sei-link-underline: var(--sei-link);
   }
 }
 :root[data-theme=dark] {
-  --color-brand: var(--color-green-600);
-  --color-text: var(--color-sand-900);
-  --color-background: var(--color-green-200);
-  --color-accent: var(--color-yellow-700);
-  --color-laccd-logo: var(--color-sand-900);
-  --sei-link: var(--color-yellow-900);
-  --sei-link-visited: var(--color-yellow-900);
-  --sei-link-hover: var(--color-blue-900);
+  --color-brand: var(--laccd-blue);
+  --color-text: color-mix(in srgb, white 92%, var(--laccd-blue-dark) 8%);
+  --color-background: color-mix(in srgb, var(--laccd-blue-dark) 25%, black);
+  --color-accent: var(--laccd-sunbeam);
+  --color-laccd-logo: var(--laccd-blue-light);
+  --sei-link: var(--laccd-blue-light);
+  --sei-link-visited: color-mix(in srgb, var(--laccd-blue-light) 70%, white);
+  --sei-link-hover: var(--laccd-sunbeam);
   --sei-link-active: var(--sei-link);
   --sei-link-underline: var(--sei-link);
 }
@@ -395,6 +431,8 @@ body {
   background-color: var(--color-background);
   color: var(--color-text);
   font-family: var(--font-family);
+  font-optical-sizing: var(--font-optical-sizing);
+  font-variant-numeric: var(--font-numeric-default);
 }
 
 body {
@@ -568,7 +606,7 @@ aside {
 }
 
 .display {
-  font-family: var(--font-family-display);
+  font-family: var(--font-family);
   font-size: var(--font-size-6);
 }
 
@@ -928,6 +966,131 @@ a.btn {
   justify-content: center;
 }
 
+/* Base card styles leveraging LACCD palette */
+.card-grid {
+  display: grid;
+  gap: var(--space-m);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-block: var(--space-l);
+}
+
+.card {
+  --card-bg: #f9fbfd; /* light surface with plenty of contrast */
+  --card-border: #c7d9e8; /* soft border on light */
+  --card-text: #1f2a38; /* readable body copy */
+  --card-accent: var(--laccd-blue-dark);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  padding: var(--space-l);
+  background: var(--card-bg);
+  color: var(--card-text);
+  border: var(--border-width-thin) solid var(--card-border);
+  border-radius: var(--border-radius);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.12);
+}
+
+.card__eyebrow {
+  font-size: var(--font-size--1);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--card-accent);
+}
+
+.card__title {
+  font-size: var(--font-size-2);
+  margin: 0;
+}
+
+.card__desc {
+  margin: 0;
+  color: var(--card-text);
+  line-height: var(--line-height-text);
+}
+
+.card__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  align-self: flex-start;
+  padding: 0.35rem 0.75rem;
+  border-radius: 99px;
+  background: #f2d99e; /* sunbeam 60% on white */
+  color: var(--laccd-black);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size--1);
+  border: 1px solid #ba994b; /* sunbeam 80% on black */
+}
+
+.card__footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-top: auto;
+}
+
+.card__cta {
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  color: var(--laccd-blue-dark);
+  border-bottom: 2px solid currentColor;
+}
+
+.card__cta:focus-visible {
+  outline: 2px solid var(--laccd-blue-light);
+  outline-offset: 2px;
+}
+
+[data-theme=dark] .card,
+.card.card--dark {
+  --card-bg: #0a1933; /* approx 35% laccd blue dark on black */
+  --card-border: #254561; /* approx 50% laccd blue on black */
+  --card-text: #fafdfd; /* near-white with hint of laccd blue light */
+  --card-accent: var(--laccd-sunbeam);
+  color: var(--card-text);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.32);
+}
+
+[data-theme=dark] .card__meta,
+.card.card--dark .card__meta {
+  background: #728195; /* blend of sand/blue-dark */
+  color: #ecf7fb; /* light text for contrast */
+  border-color: #ba994b;
+}
+
+[data-theme=dark] .card__cta,
+.card.card--dark .card__cta {
+  color: var(--laccd-sunbeam);
+}
+
+.card.card--light {
+  --card-bg: #ffffff;
+  --card-border: #b7cbdd;
+  --card-text: #162032;
+  --card-accent: var(--laccd-blue-dark);
+  color: var(--card-text);
+}
+
+/* Accessible light treatment (explicit values) */
+[data-theme=dark] .card.card--light,
+.card.card--light {
+  --card-bg: #ffffff;
+  --card-border: #b7cbdd;
+  --card-text: var(--laccd-blue-dark);
+  --card-accent: var(--laccd-blue-dark);
+  color: var(--card-text);
+}
+
 /* Figures */
 figure {
   margin: 0 0 var(--spacing-large);
@@ -1004,7 +1167,7 @@ header > * {
 header > h1 {
   margin: 0.5em 0 0 0;
   padding: 0;
-  font-family: var(--font-family-display);
+  font-family: var(--font-family);
   font-size: var(--font-size-2);
   font-weight: var(--font-weight-bold);
   color: var(--color-brand);

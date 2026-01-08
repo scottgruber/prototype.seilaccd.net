@@ -5,13 +5,13 @@
 //@use 'abstracts/mixins';
 
 // CUBE CSS layers (from broad to specific)
-@use 'composition/reset';
-@use 'composition/global';
-@use 'composition/grid';
-@use 'composition/layout';
-@use 'composition/page';
-@use 'composition/scrollbar';
-@use 'composition/print';
+@use 'compositions/reset';
+@use 'compositions/global';
+@use 'compositions/grid';
+@use 'compositions/layout';
+@use 'compositions/page';
+@use 'compositions/scrollbar';
+@use 'compositions/print';
 
 @use 'utilities/spacing';
 @use 'utilities/typography';

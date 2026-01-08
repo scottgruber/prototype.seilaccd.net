@@ -3,12 +3,9 @@
 
  <head>
      <meta charset="utf-8" />
-     <title>Sustainable Environment Institute</title>
+     <title>Prototype — Sustainable Environment Institute</title>
      <meta name="description" content="Prototype for the Sustainable Environment Institute at LA Community College District" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="css/style.css" />
    </head>
 <style type="text/css">
@@ -17,13 +14,16 @@
         grid-template-columns: 1fr;
         gap: 2rem;
         padding: 1rem;
+        max-width: 1200px;
+        margin-inline: auto;
       }
 
       .palette {
-        border: 1px solid var(--color-brown-dark);
+        border: 1px solid var(--laccd-border, #1c4993);
         border-radius: 12px;
         padding: 1rem 1rem 1.5rem;
-        background: var(--color-paper);
+        background: var(--sei-surface, #fff);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
       }
 
       .group-title {
@@ -77,6 +77,56 @@
         letter-spacing: .02em;
       }
 
+      /* LACCD palette layout */
+      .swatch-set.is-laccd {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      }
+
+      .swatch.is-laccd .chip {
+        width: 140px;
+        height: 140px;
+      }
+
+      .swatch .meta code {
+        font-size: .8rem;
+        display: inline-block;
+        margin-top: .35rem;
+        color: var(--sei-text-muted);
+      }
+
+      .heading-green-strong {
+        color: var(--laccd-green-dark);
+      }
+      .heading-green {
+        color: var(--laccd-green);
+      }
+      .heading-green-soft {
+        color: color-mix(in srgb, var(--laccd-green-light) 45%, var(--laccd-green-dark) 55%);
+      }
+
+      .intro {
+        max-width: 70ch;
+        color: var(--sei-text-muted);
+      }
+
+      @media (prefers-color-scheme: dark), :root[data-theme="dark"] {
+        .palette {
+          background: color-mix(in srgb, var(--laccd-blue-dark) 30%, black);
+          border-color: color-mix(in srgb, var(--laccd-blue) 60%, black);
+          color: color-mix(in srgb, white 90%, var(--laccd-blue-light) 10%);
+        }
+        .swatch {
+          background: color-mix(in srgb, var(--laccd-blue-dark) 15%, var(--laccd-sand));
+          border-color: color-mix(in srgb, var(--laccd-blue) 60%, black);
+        }
+        .swatch .meta {
+          color: color-mix(in srgb, white 90%, var(--laccd-blue-light) 10%);
+        }
+        .swatch .meta code {
+          color: color-mix(in srgb, white 80%, var(--laccd-blue) 20%);
+        }
+      }
+
       @media (max-width: 1100px) {
         .swatch-set {
           grid-template-columns: repeat(6, minmax(120px, 1fr));
@@ -90,7 +140,7 @@
       }
 
     </style>
-  <body>
+  <body class="colors-page">
     <header>
       <a href="https://www.laccd.edu">
       <svg class="laccd-logo" id="logo-laccd" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68.32 68.33">
@@ -126,7 +176,87 @@
     
 
     <main>
-      <h1>Color Palette</h1>
+      <h1 class="heading-green-strong">LACCD Color Palette</h1>
+      <p class="intro">Official district colors pulled from the LACCD palette are below. Headings use the three green values for quick contrast checks: dark for primary titles, mid for subheads, and a balanced mix of light/dark for tertiary labels.</p>
+
+      <section class="palette">
+        <span class="group-title heading-green">LACCD Core Colors</span>
+        <div class="swatch-set is-laccd">
+          <div class="swatch is-laccd">
+            <div class="chip" style="background: var(--laccd-blue-dark)"></div>
+            <div class="meta">
+              <h4>Blue Dark</h4>
+              #1C4993<br><code>--laccd-blue-dark</code>
+            </div>
+          </div>
+          <div class="swatch is-laccd">
+            <div class="chip" style="background: var(--laccd-blue)"></div>
+            <div class="meta">
+              <h4>Blue</h4>
+              #4BA8C3<br><code>--laccd-blue</code>
+            </div>
+          </div>
+          <div class="swatch is-laccd">
+            <div class="chip" style="background: var(--laccd-blue-light)"></div>
+            <div class="meta">
+              <h4>Blue Light</h4>
+              #81CCE7<br><code>--laccd-blue-light</code>
+            </div>
+          </div>
+          <div class="swatch is-laccd">
+            <div class="chip" style="background: var(--laccd-green-dark)"></div>
+            <div class="meta">
+              <h4>Green Dark</h4>
+              #32673D<br><code>--laccd-green-dark</code>
+            </div>
+          </div>
+          <div class="swatch is-laccd">
+            <div class="chip" style="background: var(--laccd-green)"></div>
+            <div class="meta">
+              <h4>Green</h4>
+              #5F9A3F<br><code>--laccd-green</code>
+            </div>
+          </div>
+          <div class="swatch is-laccd">
+            <div class="chip" style="background: var(--laccd-green-light)"></div>
+            <div class="meta">
+              <h4>Green Light</h4>
+              #A0CD81<br><code>--laccd-green-light</code>
+            </div>
+          </div>
+          <div class="swatch is-laccd">
+            <div class="chip" style="background: var(--laccd-orange)"></div>
+            <div class="meta">
+              <h4>Orange</h4>
+              #EC8544<br><code>--laccd-orange</code>
+            </div>
+          </div>
+          <div class="swatch is-laccd">
+            <div class="chip" style="background: var(--laccd-sunbeam)"></div>
+            <div class="meta">
+              <h4>Sunbeam</h4>
+              #E9BF5E<br><code>--laccd-sunbeam</code>
+            </div>
+          </div>
+          <div class="swatch is-laccd">
+            <div class="chip" style="background: var(--laccd-sand)"></div>
+            <div class="meta">
+              <h4>Sand</h4>
+              #F4D698<br><code>--laccd-sand</code>
+            </div>
+          </div>
+          <div class="swatch is-laccd">
+            <div class="chip" style="background: var(--laccd-black)"></div>
+            <div class="meta">
+              <h4>Black</h4>
+              #000000<br><code>--laccd-black</code>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <h2 class="heading-green">Legacy Extended Scales</h2>
+      <h3 class="heading-green-soft">HSL ramps remain below for comparison and migration.</h3>
 
       <!-- GREEN -->
       <section class="palette">
@@ -503,15 +633,13 @@
 
     <footer>
       <ul>
-        <li><a href="sei-beth-xiao-synopsis.html">What SEI Does and Why It Matters</a></li>
-        <li><a href="sei-proposed-navigation.html">SEI Proposed Navigation</a></li>
-        <li><a href="demonstration-project.html">Demonstration Project Sample</a></li>
+        <li><a href="synopsis.html">What SEI Does and Why It Matters</a></li>
+        <li><a href="pages.html">SEI Proposed Navigation</a></li>
+        <li><a href="project.html">Demonstration Project Sample</a></li>
         <li><a href="colors.html">Colors</a></li>
-        <li><a href="icons.html">Icons</a></li>
+        <li><a href="palette.html">Palette</a></li>
+        <li><a href="font.html">Font</a></li>
         <li><a href="styleguide.html">Styleguide</a></li>
-        <li><a href="fonts-with-samples.html">Font PT Sans</a></li>
-        <li><a href="index-roboto.html">Roboto</a></li>
-        <li><a href="index-roboto-slab.html">Roboto Slab</a></li>
       </ul>
       <small>&copy; Sustainable Environment Institute, Los Angeles Community College District</small>
       <button id="theme-toggle" class="btn-theme" aria-label="Toggle dark mode">

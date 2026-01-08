@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Color Palette – LACCD set</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Your compiled palette CSS (from SCSS) -->
+    <link rel="stylesheet" href="css/palette.css" />
+
+    <style>
+      :root {
+        --ui-page-bg-light: #f5f5f5;
+        --ui-page-bg-dark: #05060a;
+        --ui-panel-bg-light: #ffffff;
+        --ui-panel-bg-dark: #111827;
+        --ui-border-subtle-light: rgba(0, 0, 0, 0.08);
+        --ui-border-subtle-dark: rgba(255, 255, 255, 0.12);
+        --ui-text-light: #111111;
+        --ui-text-dark: #f3f4f6;
+        --ui-muted-light: #6b7280;
+        --ui-muted-dark: #9ca3af;
+      }
+
+      html[data-theme="light"] {
+        --ui-page-bg: var(--ui-page-bg-light);
+        --ui-panel-bg: var(--ui-panel-bg-light);
+        --ui-border-subtle: var(--ui-border-subtle-light);
+        --ui-text: var(--ui-text-light);
+        --ui-muted: var(--ui-muted-light);
+      }
+
+      html[data-theme="dark"] {
+        --ui-page-bg: var(--ui-page-bg-dark);
+        --ui-panel-bg: var(--ui-panel-bg-dark);
+        --ui-border-subtle: var(--ui-border-subtle-dark);
+        --ui-text: var(--ui-text-dark);
+        --ui-muted: var(--ui-muted-dark);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 1.75rem clamp(1.25rem, 3vw, 3rem);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+          "Segoe UI", sans-serif;
+        background: var(--ui-page-bg);
+        color: var(--ui-text);
+      }
+
+      header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0.75rem 1.5rem;
+        align-items: center;
+        margin-bottom: 1.75rem;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+      }
+
+      .subtitle {
+        margin: 0.15rem 0 0;
+        font-size: 0.9rem;
+        color: var(--ui-muted);
+        max-width: 40rem;
+      }
+
+      .theme-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+        color: var(--ui-muted);
+      }
+
+      .theme-toggle button {
+        border-radius: 999px;
+        border: 1px solid var(--ui-border-subtle);
+        padding: 0.25rem 0.8rem;
+        background: var(--ui-panel-bg);
+        cursor: pointer;
+        font-size: 0.85rem;
+        color: inherit;
+      }
+
+      .theme-toggle button[aria-pressed="true"] {
+        font-weight: 600;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .palette-group {
+        background: var(--ui-panel-bg);
+        border-radius: 1rem;
+        border: 1px solid var(--ui-border-subtle);
+        padding: 1rem 1.1rem 1.1rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+      }
+
+      .group-header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.4rem 1rem;
+        margin-bottom: 0.9rem;
+      }
+
+      .group-title {
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-weight: 600;
+      }
+
+      .group-subtitle {
+        font-size: 0.8rem;
+        color: var(--ui-muted);
+      }
+
+      .swatch-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 0.9rem;
+      }
+
+      .swatch {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.55rem 0.65rem;
+        border-radius: 0.8rem;
+        border: 1px solid var(--ui-border-subtle);
+        min-height: 64px;
+      }
+
+      .chip {
+        width: 40px;
+        height: 40px;
+        border-radius: 999px;
+        flex-shrink: 0;
+        border: 1px solid rgba(0, 0, 0, 0.14);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        background-color: transparent;
+        /* filled via JS using CSS vars */
+      }
+
+      html[data-theme="dark"] .chip {
+        border-color: rgba(255, 255, 255, 0.18);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+      }
+
+      .meta {
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .meta-title {
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
+
+      .meta-line {
+        font-size: 0.78rem;
+        color: var(--ui-muted);
+      }
+
+      .meta-line code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+        font-size: 0.75rem;
+        padding: 0.05rem 0.25rem;
+        border-radius: 0.4rem;
+        background: rgba(0, 0, 0, 0.035);
+      }
+
+      html[data-theme="dark"] .meta-line code {
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding-inline: 1.25rem;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <h1>Color Palette</h1>
+        <p class="subtitle">
+          Generated from <code>palette.css</code> custom properties (e.g. <code>--color-blue-dark-0</code>) built from the LACCD palette and an Ivory tint
+          anchor. Values below are read from computed styles to stay in sync with the CSS.
+        </p>
+      </div>
+      <div class="theme-toggle" aria-label="Theme toggle">
+        <span>Theme</span>
+        <button type="button" data-theme-target="light" aria-pressed="true">Light</button>
+        <button type="button" data-theme-target="dark" aria-pressed="false">Dark</button>
+      </div>
+    </header>
+
+    <main id="palette-root">
+      <!-- JS will populate groups and swatches here -->
+    </main>
+
+    <script>
+      // Base colors and steps must match your SCSS/variables
+      const baseColors = [
+        { key: "green-dark", label: "Green Dark" },
+        { key: "green", label: "Green" },
+        { key: "green-light", label: "Green Light" },
+        { key: "blue-dark", label: "Blue Dark" },
+        { key: "blue", label: "Blue" },
+        { key: "orange", label: "Orange" },
+        { key: "orchid", label: "Orchid" },
+        { key: "wheat", label: "Wheat" },
+        { key: "sunbeam", label: "Sunbeam" },
+        { key: "sand", label: "Sand" },
+        { key: "brown", label: "Brown" },
+        { key: "black", label: "Black" }
+      ];
+
+      // Scale indices from your SCSS: -2, -1, 0, 1, 2
+      const steps = [-2, -1, 0, 1, 2];
+
+      // Utility: convert "rgb(r, g, b)" to hex / hsl strings
+      function rgbStringToComponents (rgbString) {
+        const m = rgbString.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/i);
+        if (!m) return null;
+        return { r: Number(m[1]), g: Number(m[2]), b: Number(m[3]) };
+      }
+
+      function rgbToHex (r, g, b) {
+        const toHex = (v) => v.toString(16).padStart(2, "0");
+        return "#" + toHex(r) + toHex(g) + toHex(b);
+      }
+
+      function rgbToHsl (r, g, b) {
+        r /= 255; g /= 255; b /= 255;
+        const max = Math.max(r, g, b);
+        const min = Math.min(r, g, b);
+        let h, s;
+        const l = (max + min) / 2;
+        const d = max - min;
+
+        if (d === 0) {
+          h = s = 0;
+        } else {
+          s = d / (1 - Math.abs(2 * l - 1));
+          switch (max) {
+            case r:
+              h = 60 * (((g - b) / d) % 6);
+              break;
+            case g:
+              h = 60 * ((b - r) / d + 2);
+              break;
+            case b:
+              h = 60 * ((r - g) / d + 4);
+              break;
+          }
+        }
+        if (h < 0) h += 360;
+        return {
+          h: Math.round(h),
+          s: Math.round(s * 100),
+          l: Math.round(l * 100)
+        };
+      }
+
+      function formatStepLabel (baseLabel, index) {
+        if (index === 0) return `${baseLabel} 0 (base)`;
+        if (index > 0) return `${baseLabel} +${index}`;
+        return `${baseLabel} ${index}`;
+      }
+
+      function cssVarName (baseKey, index) {
+        if (index < 0) {
+          return `--color-${baseKey}--${Math.abs(index)}`;
+        }
+        return `--color-${baseKey}-${index}`;
+      }
+
+      function renderPalette () {
+        const root = document.getElementById("palette-root");
+        root.innerHTML = "";
+
+        baseColors.forEach(base => {
+          const group = document.createElement("section");
+          group.className = "palette-group";
+
+          const header = document.createElement("div");
+          header.className = "group-header";
+
+          const title = document.createElement("div");
+          title.className = "group-title";
+          title.textContent = base.label;
+
+          const subtitle = document.createElement("div");
+          subtitle.className = "group-subtitle";
+          subtitle.textContent = `CSS vars: --color-${base.key}--2 · --1 · 0 · 1 · 2`;
+
+          header.appendChild(title);
+          header.appendChild(subtitle);
+          group.appendChild(header);
+
+          const grid = document.createElement("div");
+          grid.className = "swatch-grid";
+
+          steps.forEach(idx => {
+            const varName = cssVarName(base.key, idx);
+            const swatch = document.createElement("div");
+            swatch.className = "swatch";
+
+            const chip = document.createElement("div");
+            chip.className = "chip";
+            chip.style.backgroundColor = `var(${varName})`;
+
+            const meta = document.createElement("div");
+            meta.className = "meta";
+
+            const titleEl = document.createElement("div");
+            titleEl.className = "meta-title";
+            titleEl.textContent = formatStepLabel(base.label, idx);
+
+            const lineVar = document.createElement("div");
+            lineVar.className = "meta-line";
+            lineVar.innerHTML = `var: <code>${varName}</code>`;
+
+            // Placeholders for Hex / RGB / HSL – filled after we compute actual color
+            const lineHex = document.createElement("div");
+            lineHex.className = "meta-line";
+            lineHex.dataset.type = "hex"; // used later
+            const lineRgb = document.createElement("div");
+            lineRgb.className = "meta-line";
+            lineRgb.dataset.type = "rgb";
+            const lineHsl = document.createElement("div");
+            lineHsl.className = "meta-line";
+            lineHsl.dataset.type = "hsl";
+
+            meta.appendChild(titleEl);
+            meta.appendChild(lineHex);
+            meta.appendChild(lineRgb);
+            meta.appendChild(lineHsl);
+            meta.appendChild(lineVar);
+
+            swatch.appendChild(chip);
+            swatch.appendChild(meta);
+
+            // attach references for later measurement
+            swatch.__chip = chip;
+            swatch.__lineHex = lineHex;
+            swatch.__lineRgb = lineRgb;
+            swatch.__lineHsl = lineHsl;
+
+            grid.appendChild(swatch);
+          });
+
+          group.appendChild(grid);
+          root.appendChild(group);
+        });
+
+        // Let layout flush, then compute colors
+        requestAnimationFrame(fillComputedColors);
+      }
+
+      function fillComputedColors () {
+        const swatches = document.querySelectorAll(".swatch");
+        swatches.forEach(swatch => {
+          const chip = swatch.__chip;
+          const hexLine = swatch.__lineHex;
+          const rgbLine = swatch.__lineRgb;
+          const hslLine = swatch.__lineHsl;
+
+          if (!chip || !hexLine || !rgbLine || !hslLine) return;
+
+          const rgbStr = getComputedStyle(chip).backgroundColor;
+          const comps = rgbStringToComponents(rgbStr);
+          if (!comps) return;
+
+          const hex = rgbToHex(comps.r, comps.g, comps.b);
+          const hsl = rgbToHsl(comps.r, comps.g, comps.b);
+
+          hexLine.textContent = `Hex: ${hex.toUpperCase()}`;
+          rgbLine.textContent = `RGB: ${comps.r}, ${comps.g}, ${comps.b}`;
+          hslLine.textContent = `HSL: ${hsl.h}° ${hsl.s}% ${hsl.l}%`;
+        });
+      }
+
+      function setupThemeToggle () {
+        const buttons = document.querySelectorAll(".theme-toggle button");
+        buttons.forEach(btn => {
+          btn.addEventListener("click", () => {
+            const theme = btn.dataset.themeTarget;
+            document.documentElement.setAttribute("data-theme", theme);
+
+            buttons.forEach(b => {
+              b.setAttribute(
+                "aria-pressed",
+                b === btn ? "true" : "false"
+              );
+            });
+
+            // Recompute colors if needed (background may change slightly)
+            requestAnimationFrame(fillComputedColors);
+          });
+        });
+      }
+
+      renderPalette();
+      setupThemeToggle();
+    </script>
+  </body>
+
+</html>

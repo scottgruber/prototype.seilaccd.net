@@ -1,5 +1,31 @@
+@font-face {
+  font-family: "InterVariable";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/inter/InterVariable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "InterVariable";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/inter/InterVariable-Italic.woff2") format("woff2");
+}
+
 :root {
 
+  --font-family: InterVariable, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* Typography behavior tokens */
+  --font-optical-sizing: auto;
+  --font-numeric-default: lining-nums tabular-nums;
+  --font-numeric-oldstyle: oldstyle-nums proportional-nums;
+  --font-numeric-data: lining-nums tabular-nums slashed-zero;
+
+  /* Optional: add one for normal (reset) */
+  --font-numeric-none: normal;
+  
   // New Type Scale (Major Second)   
   /* https://utopia.fyi/type/calculator?c=360,16,1.25,1240,20,1.25,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
@@ -25,19 +51,12 @@
   /* Step  7: 85.8307px→ 95.3674px*/
 
 
-  --tracking-tight: -0.01em;
-  --tracking-normal: 0em;
+  --tracking-tight: -0.03em;
+  --tracking-normal: -0.015em;
   --tracking-wide: 0.05em;
 
-  --font-family: "PT Sans", sans-serif;
-  --font-family-display: "PT Sans", sans-serif;
-  --font-family-system: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-family-slab: "Roboto Slab", serif;
-  --font-family-roboto: "Roboto", sans-serif;
   
   //* Typography Perfect Fourth 1.333 */
-  --font-size-6: 4.209rem;
   --font-size-xx-large: 3.157rem;
   --font-size-x-large: 2.369rem;
   --font-size-large: 1.777rem;
@@ -115,6 +134,28 @@
   --duration-promptly: 0.5s;
   --duration-quickly: 0.2s;
   --duration-slowly: 1s;
+
+  /* LACCD official palette (source: json/LACCD.json) */
+  --laccd-black: #000000;
+  --laccd-green-dark: #32673d;
+  --laccd-green: #5f9a3f;
+  --laccd-green-light: #a0cd81;
+  --laccd-blue-dark: #1c4993;
+  --laccd-blue: #4ba8c3;
+  --laccd-blue-light: #81cce7;
+  --laccd-orange: #ec8544;
+  --laccd-sand: #f4d698;
+  --laccd-sunbeam: #e9bf5e;
+
+  /* Palette-derived basics */
+  --laccd-surface: #ffffff;
+  --laccd-surface-alt: color-mix(in srgb, var(--laccd-sand) 70%, white);
+  --laccd-surface-elev: color-mix(in srgb, var(--laccd-sand) 50%, white);
+  --laccd-text: var(--laccd-black);
+  --laccd-text-strong: color-mix(in srgb, var(--laccd-black) 90%, var(--laccd-blue-dark) 10%);
+  --laccd-text-muted: color-mix(in srgb, var(--laccd-black) 55%, white);
+  --laccd-border: color-mix(in srgb, var(--laccd-blue-dark) 35%, black);
+  --laccd-outline: var(--laccd-blue);
 
 
   /* Sand tonal scale (base color at 800) */
@@ -238,63 +279,63 @@
   --color-yellow-900: hsl(47, 89%, 95%);
   /* #fef9e7 */
 
-  --color-laccd-logo: #005a97;
+  --color-laccd-logo: var(--laccd-blue-dark);
 
 
   /* Core surfaces & text */
-  --sei-surface: var(--color-paper);
+  --sei-surface: var(--laccd-surface);
   /* page background */
-  --sei-surface-alt: var(--color-sand-900);
+  --sei-surface-alt: var(--laccd-surface-alt);
   /* subtle panels */
-  --sei-surface-elev: var(--color-sand-800);
+  --sei-surface-elev: var(--laccd-surface-elev);
   /* cards */
-  --sei-border: var(--color-brown-300);
-  --sei-outline: var(--color-blue-500);
+  --sei-border: var(--laccd-border);
+  --sei-outline: var(--laccd-outline);
   /* focus ring */
 
-  --sei-text: var(--color-brown-100);
+  --sei-text: var(--laccd-text);
   /* default body text */
-  --sei-text-strong: var(--color-brown-300);
-  --sei-text-muted: var(--color-sand-500);
+  --sei-text-strong: var(--laccd-text-strong);
+  --sei-text-muted: var(--laccd-text-muted);
 
   /* Brand & accents */
-  --sei-brand: var(--color-green-400);
-  --sei-brand-strong: var(--color-green-600);
-  --sei-accent: var(--color-blue-500);
-  --sei-accent-strong: var(--color-blue-600);
-  --sei-highlight: var(--color-orchid-500);
+  --sei-brand: var(--laccd-blue-dark);
+  --sei-brand-strong: var(--laccd-blue);
+  --sei-accent: var(--laccd-orange);
+  --sei-accent-strong: color-mix(in srgb, var(--laccd-orange) 85%, black);
+  --sei-highlight: var(--laccd-sunbeam);
 
   /* Links */
   --sei-link: var(--sei-brand);
-  --sei-link-visited: var(--color-orchid-300);
-  --sei-link-hover: var(--color-orchid-100);
+  --sei-link-visited: var(--color-orchid-100);
+  --sei-link-hover: var(--laccd-blue);
   --sei-link-active: var(--sei-link);
   --sei-link-underline: var(--sei-link);
 
   /* Feedback */
-  --sei-info: var(--color-blue-500);
-  --sei-success: var(--color-green-600);
-  --sei-warn: var(--color-yellow-500);
-  --sei-danger: var(--color-brown-300);
+  --sei-info: var(--laccd-blue);
+  --sei-success: var(--laccd-green);
+  --sei-warn: var(--laccd-sunbeam);
+  --sei-danger: color-mix(in srgb, var(--laccd-orange) 50%, var(--laccd-black));
 
   /* Components */
-  --sei-card-bg: var(--color-orchid-300);
-  --sei-card-border: var(--color-orchid-100);
-  --sei-card-text: var(--color-sand-900);
+  --sei-card-bg: color-mix(in srgb, var(--laccd-blue-light) 40%, white);
+  --sei-card-border: var(--laccd-blue-light);
+  --sei-card-text: var(--laccd-text);
 
-  --sei-btn-bg: var(--color-orchid-300);
-  --sei-btn-bg-hover: var(--color-orchid-200);
+  --sei-btn-bg: var(--laccd-blue-dark);
+  --sei-btn-bg-hover: var(--laccd-blue);
   --sei-btn-text: white;
-  --sei-btn-border: var(--color-orchid-100);
+  --sei-btn-border: var(--laccd-blue-dark);
 
   --sei-input-bg: white;
   --sei-input-border: var(--sei-border);
-  --sei-input-text: var(--sei-text);
-  --sei-input-placeholder: var(--sei-text-muted);
+  --sei-input-text: var(--laccd-text);
+  --sei-input-placeholder: var(--laccd-text-muted);
 
   /* Selection */
-  --sei-selection-bg: var(--color-orchid-300);
-  --sei-selection-text: white;
+  --sei-selection-bg: var(--laccd-blue-light);
+  --sei-selection-text: var(--laccd-text);
 
   --color-brand: var(--sei-brand);
   --color-text: var(--sei-text);
@@ -322,15 +363,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root  {
-    --color-brand: var(--color-green-600);
-    --color-text: var(--color-sand-900);
-    --color-background: var(--color-green-200);
-    --color-accent: var(--color-yellow-700);
-    --color-laccd-logo: var(--color-sand-900);
+    --color-brand: var(--laccd-blue);
+    --color-text: color-mix(in srgb, white 92%, var(--laccd-blue-dark) 8%);
+    --color-background: color-mix(in srgb, var(--laccd-blue-dark) 25%, black);
+    --color-accent: var(--laccd-sunbeam);
+    --color-laccd-logo: var(--laccd-blue-light);
 
-    --sei-link: var(--color-yellow-900);
-    --sei-link-visited: var(--color-yellow-900);
-    --sei-link-hover: var(--color-blue-900);
+    --sei-link: var(--laccd-blue-light);
+    --sei-link-visited: color-mix(in srgb, var(--laccd-blue-light) 70%, white);
+    --sei-link-hover: var(--laccd-sunbeam);
     --sei-link-active: var(--sei-link);
     --sei-link-underline: var(--sei-link);
   }
@@ -338,17 +379,17 @@
 }
 
 :root[data-theme="dark"]  {
-    --color-brand: var(--color-green-600);
-    --color-text: var(--color-sand-900);
-    --color-background: var(--color-green-200);
-    --color-accent: var(--color-yellow-700);
-    --color-laccd-logo: var(--color-sand-900);
+  --color-brand: var(--laccd-blue);
+  --color-text: color-mix(in srgb, white 92%, var(--laccd-blue-dark) 8%);
+  --color-background: color-mix(in srgb, var(--laccd-blue-dark) 25%, black);
+  --color-accent: var(--laccd-sunbeam);
+  --color-laccd-logo: var(--laccd-blue-light);
 
-    --sei-link: var(--color-yellow-900);
-    --sei-link-visited: var(--color-yellow-900);
-    --sei-link-hover: var(--color-blue-900);
-    --sei-link-active: var(--sei-link);
-    --sei-link-underline: var(--sei-link);
+  --sei-link: var(--laccd-blue-light);
+  --sei-link-visited: color-mix(in srgb, var(--laccd-blue-light) 70%, white);
+  --sei-link-hover: var(--laccd-sunbeam);
+  --sei-link-active: var(--sei-link);
+  --sei-link-underline: var(--sei-link);
 }
 
 @viewport {

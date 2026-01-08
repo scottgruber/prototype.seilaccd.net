@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Font Sampler (Inter Variable)</title>
+
+ 
+
+  <!-- Minimal layout & utilities (no JS) -->
+  <style>
+  :root{
+    /* Font + behavior */
+    --font-inter: "InterVariable", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --lh-body: 1.6; --lh-heading: 1.2;
+    --track-body: -0.015em; --track-heading: -0.03em;
+
+    /* Type scale tokens used by your sample */
+    --font-size--2: clamp(.72rem, .3vw + .65rem, .8rem);
+    --font-size--1: clamp(.9rem, .35vw + .75rem, 1rem);
+    --font-size-0: clamp(1.125rem, .6vw + .9rem, 1.25rem);
+    --font-size-1: clamp(1.406rem, .9vw + 1rem, 1.563rem);
+    --font-size-2: clamp(1.758rem, 1.2vw + 1.1rem, 1.953rem);
+    --font-size-3: clamp(2.197rem, 1.6vw + 1.2rem, 2.441rem);
+    --font-size-4: clamp(2.746rem, 2.1vw + 1.3rem, 3.052rem);
+    --font-size-5: clamp(3.433rem, 2.7vw + 1.4rem, 3.815rem);
+    --font-size-6: clamp(4.291rem, 3.4vw + 1.6rem, 4.768rem);
+    --font-size-7: clamp(5.364rem, 4.2vw + 1.8rem, 5.96rem);
+
+    /* Numeric variants for the table demo */
+    --nums-table: lining-nums tabular-nums;
+  }
+
+  html{font-family:var(--font-inter); font-optical-sizing:auto;}
+  body{margin:0; color:#111; line-height:var(--lh-body); letter-spacing:var(--track-body);}
+  main{max-width:1200px; margin:2rem auto; padding:0 1rem 4rem;}
+  a{color:#0b62ff; text-decoration:none} a:hover{text-decoration:underline}
+  p{max-width:78ch}
+
+  h1,h2,h3{line-height:var(--lh-heading); letter-spacing:var(--track-heading); margin:1.25rem 0 .65rem}
+  h1{font-weight:800; font-size:var(--font-size-4)}
+  h2{font-weight:700; font-size:var(--font-size-2)}
+  h3{font-weight:600; font-size:var(--font-size-1)}
+
+  /* Type sheet layout — roomy columns */
+  .type-sheet{
+    display:grid;
+    gap:2rem;
+    grid-template-columns: repeat(auto-fit, minmax(60em, 1fr));
+    align-items:start;
+    margin-block: 1.25rem 2rem;
+  }
+  .sample{
+    border:1px solid #eee; border-radius:12px; padding:1rem 1rem 1.25rem; background:#fff;
+  }
+  .label{font-size:.85rem; color:#666; margin:.25rem 0 .5rem}
+  .row{margin:.45rem 0}
+  .display{font-size: clamp(1.75rem, 1.6vw + 1.25rem, 2.5rem)}
+  .edit{display:block; padding:.5rem .75rem; border:1px dashed #ddd; border-radius:8px; outline:none;font-size: 3em}
+  .tight-2{letter-spacing:-0.02em}
+
+  /* Weight utilities (100–900) + italic */
+  .w100{font-weight:100} .w200{font-weight:200} .w300{font-weight:300}
+  .w400{font-weight:400} .w500{font-weight:500} .w600{font-weight:600}
+  .w700{font-weight:700} .w800{font-weight:800} .w900{font-weight:900}
+  .italic{font-style:italic}
+
+  /* Numeric table demo */
+  .table{width:100%; border-collapse:collapse; margin-top:.25rem; font-variant-numeric: var(--nums-table)}
+  .table th,.table td{padding:.55rem .75rem; border-bottom:1px solid #eee; text-align:right}
+  .table th:first-child,.table td:first-child{text-align:left}
+  .table caption{caption-side: top; text-align:left; font-weight:600; margin-bottom:.35rem}
+  blockquote{margin-left:0; padding:.75rem 1rem; border-left:4px solid #ddd; background:#fafafa}
+  </style>
+
+  <!-- @include "partials/_head.html" -->
+</head>
+
+<body data-theme="fonts">
+  <!-- @include "partials/_header.kit" -->
+  <!-- @include "partials/_nav.html" -->
+
+  <main>
+    <h1>Font Sampler (Inter Variable)</h1>
+    <p><a href="https://rsms.me/inter/" target="_blank" rel="noopener">Inter</a></p>
+    <p>The 21st century standard. Inter is a workhorse of a typeface carefully crafted & designed for a wide range of applications, from detailed user interfaces to marketing & signage.</p>
+
+   
+
+    <section class="sample-content">
+      <h2>Sample Content</h2>
+      <h3 class="w700">SEI connects classrooms, campuses, and communities</h3>
+      <p>SEI leads faculty professional development and curriculum innovation in sustainability and environmental education across the district. Our work bridges operations and learning, turning campus construction and facilities into living laboratories for students.</p>
+
+      <h3 class="w700">Programs &amp; Learning</h3>
+      <p>Through workshops, coaching, and the Demonstration Project, SEI supports educators in embedding environmental equity into every discipline—from political science to English. Faculty gain practical tools, shared resources, and a community of practice committed to authentic climate education.</p>
+
+      <h3 class="w700">Student Opportunities</h3>
+      <p>With partners like Build LACCD, SEI has helped expand internships from nine to more than one hundred across the district. These applied experiences connect classroom learning to real jobs, advancing equitable access to sustainability careers.</p>
+
+      <blockquote>Because of SEI, new campus construction is now part of the classroom—turning buildings and operations into living labs for sustainability.</blockquote>
+
+      <p>Beyond the district, SEI collaborates with universities, Indigenous communities, and local partners to align policy, practice, and public engagement—so that climate learning leads to durable change.</p>
+    </section>
+ <section class="type-sheet">
+      <!-- Column: Normal weights -->
+      <article class="sample">
+        <h2>Normal (100–900)</h2>
+
+        <div class="label">Uppercase</div>
+        <div class="row edit w100" contenteditable="true">[100] ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+        <div class="row edit w200" contenteditable="true">[200] ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+        <div class="row edit w300" contenteditable="true">[300] ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+        <div class="row edit w400" contenteditable="true">[400] ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+        <div class="row edit w500" contenteditable="true">[500] ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+        <div class="row edit w600" contenteditable="true">[600] ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+        <div class="row edit w700" contenteditable="true">[700] ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+        <div class="row edit w800" contenteditable="true">[800] ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+        <div class="row edit w900" contenteditable="true">[900] ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+
+        <div class="label" style="margin-top:.75rem">Lowercase</div>
+        <div class="row edit w100" contenteditable="true">[100] abcdefghijklmnopqrstuvwxyz</div>
+        <div class="row edit w200" contenteditable="true">[200] abcdefghijklmnopqrstuvwxyz</div>
+        <div class="row edit w300" contenteditable="true">[300] abcdefghijklmnopqrstuvwxyz</div>
+        <div class="row edit w400" contenteditable="true">[400] abcdefghijklmnopqrstuvwxyz</div>
+        <div class="row edit w500" contenteditable="true">[500] abcdefghijklmnopqrstuvwxyz</div>
+        <div class="row edit w600" contenteditable="true">[600] abcdefghijklmnopqrstuvwxyz</div>
+        <div class="row edit w700" contenteditable="true">[700] abcdefghijklmnopqrstuvwxyz</div>
+        <div class="row edit w800" contenteditable="true">[800] abcdefghijklmnopqrstuvwxyz</div>
+        <div class="row edit w900" contenteditable="true">[900] abcdefghijklmnopqrstuvwxyz</div>
+
+        <div class="label" style="margin-top:.75rem">Punctuation &amp; Numbers</div>
+        <div class="row edit w400">1234567890 !@#$%^&amp;*(){} ‘ ’ “ ”</div>
+
+        <div class="label" style="margin-top:.75rem">Display line</div>
+        <div class="row edit display w700 tight-2">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</div>
+      </article>
+
+      <!-- Column: Italic weights -->
+      <article class="sample">
+        <h2>Italic (100–900)</h2>
+
+        <div class="label">Uppercase</div>
+        <div class="row edit w100 italic" contenteditable="true">[100] ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+        <div class="row edit w200 italic" contenteditable="true">[200] ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+        <div class="row edit w300 italic" contenteditable="true">[300] ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+        <div class="row edit w400 italic" contenteditable="true">[400] ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+        <div class="row edit w500 italic" contenteditable="true">[500] ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+        <div class="row edit w600 italic" contenteditable="true">[600] ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+        <div class="row edit w700 italic" contenteditable="true">[700] ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+        <div class="row edit w800 italic" contenteditable="true">[800] ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+        <div class="row edit w900 italic" contenteditable="true">[900] ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+
+        <div class="label" style="margin-top:.75rem">Lowercase</div>
+        <div class="row edit w100 italic" contenteditable="true">[100] abcdefghijklmnopqrstuvwxyz</div>
+        <div class="row edit w200 italic" contenteditable="true">[200] abcdefghijklmnopqrstuvwxyz</div>
+        <div class="row edit w300 italic" contenteditable="true">[300] abcdefghijklmnopqrstuvwxyz</div>
+        <div class="row edit w400 italic" contenteditable="true">[400] abcdefghijklmnopqrstuvwxyz</div>
+        <div class="row edit w500 italic" contenteditable="true">[500] abcdefghijklmnopqrstuvwxyz</div>
+        <div class="row edit w600 italic" contenteditable="true">[600] abcdefghijklmnopqrstuvwxyz</div>
+        <div class="row edit w700 italic" contenteditable="true">[700] abcdefghijklmnopqrstuvwxyz</div>
+        <div class="row edit w800 italic" contenteditable="true">[800] abcdefghijklmnopqrstuvwxyz</div>
+        <div class="row edit w900 italic" contenteditable="true">[900] abcdefghijklmnopqrstuvwxyz</div>
+
+        <div class="label" style="margin-top:.75rem">Punctuation &amp; Numbers</div>
+        <div class="row edit w400 italic">1234567890 !@#$%^&amp;*(){} ‘ ’ “ ”</div>
+
+        <div class="label" style="margin-top:.75rem">Display line</div>
+        <div class="row edit display w700 italic tight-2">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</div>
+      </article>
+
+      <!-- Column: Numeric table -->
+      <article class="sample">
+        <h2>Numeric Table (tabular + lining)</h2>
+        <table class="table">
+          <caption>Program Metrics — 2024–2025</caption>
+          <thead>
+            <tr>
+              <th>Measure</th>
+              <th>Q1</th>
+              <th>Q2</th>
+              <th>Q3</th>
+              <th>Q4</th>
+              <th>YTD</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Enrollments</td><td>1,204</td><td>1,187</td><td>1,298</td><td>1,356</td><td>5,045</td></tr>
+            <tr><td>Completion Rate</td><td>91.2%</td><td>92.5%</td><td>93.0%</td><td>94.1%</td><td>92.7%</td></tr>
+            <tr><td>Hours Logged</td><td>12,480</td><td>11,906</td><td>13,114</td><td>13,775</td><td>51,275</td></tr>
+            <tr><td>Avg. Score</td><td>87.4</td><td>88.1</td><td>89.6</td><td>90.3</td><td>88.9</td></tr>
+            <tr><td>Scholarships</td><td>38</td><td>42</td><td>47</td><td>51</td><td>178</td></tr>
+          </tbody>
+        </table>
+
+        <div class="label" style="margin-top:.75rem">Fractions &amp; Codes</div>
+        <p class="row" style="font-variant-numeric: diagonal-fractions; font-feature-settings:'zero' 1">
+          Mean = 5 1/2 &nbsp;·&nbsp; σ = 0.03 &nbsp;·&nbsp; Code: 00I1LZ-7
+        </p>
+      </article>
+    </section>
+    <h2>Type Scale</h2>
+    <p style="font-size: var(--font-size--2)">Step -2 (min: 11.52px → max: 12.8px)</p>
+    <p style="font-size: var(--font-size--1)">Step -1 (min: 14.4px → max: 16px)</p>
+    <p style="font-size: var(--font-size-0)">Step 0 (min: 18px → max: 20px)</p>
+    <p style="font-size: var(--font-size-1)">Step 1 (min: 22.5px → max: 25px)</p>
+    <p style="font-size: var(--font-size-2)">Step 2 (min: 28.125px → max: 31.25px)</p>
+    <p style="font-size: var(--font-size-3)">Step 3 (min: 35.1563px → max: 39.0625px)</p>
+    <p style="font-size: var(--font-size-4)" class="tight-2">Step 4 (min: 43.9453px → max: 48.8281px)</p>
+    <p style="font-size: var(--font-size-5)" class="tight-2">Step 5 (min: 54.9316px → max: 61.0352px)</p>
+    <p style="font-size: var(--font-size-6)" class="tight-2">Step 6 (min: 68.6646px → max: 76.2939px)</p>
+    <p style="font-size: var(--font-size-7)" class="tight-2">Step 7 (min: 85.8307px → max: 95.3674px)</p>
+
+    
+  </main>
+
+  <!-- @include "partials/_footer.html" -->
+</body>
+</html>

@@ -1,0 +1,70 @@
+// Base palette
+$palette: (
+  "green-dark":  #32673d,
+  "green": #5f9a3f,
+  "green-light":      #a0cd81,
+  "orchid": #58335b,
+  "blue-dark":     #1c4993,
+  "blue": #4ba8c3,
+  "orange": #ec8544,
+  "wheat": #f4d698,
+  "sunbeam": #e9bf5e,
+  "sand": #a39082,
+  "brown": #1f1b19,
+  "black": #000000,
+);
+
+// Page background to tint toward (Ivory)
+$bg-ivory: #f0ebe8;
+
+// Stops: 2 darker, base, 2 lighter
+$stops: (-2, -1, 0, 1, 2);
+
+// Generate a single step around a base color.
+// Negative indices: darker via HSL lightness.
+// Positive indices: lighter via mix() toward the background.
+@function palette-step($color, $index, $bg: $bg-ivory) {
+  $h: hue($color);
+  $s: saturation($color);
+  $l: lightness($color);
+
+  @if $index == 0 {
+    @return $color;
+  }
+
+  @if $index < 0 {
+    // Two darker steps, roughly 75% and 55% of original lightness.
+    $factor: if($index == -1, 0.75, 0.55);
+    $new-l: $l * $factor;
+    @if $new-l < 0% { $new-l: 0%; }
+
+    // Slight desaturation in darks to avoid mud
+    $new-s: $s * 0.9;
+    @return hsl($h, $new-s, $new-l);
+  }
+
+  // Positive indices: tint toward the background
+  // +1 ≈ 75% base / 25% bg, +2 ≈ 50% base / 50% bg
+  $weight: if($index == 1, 75%, 50%); // weight of base color
+  $mixed: mix($color, $bg, $weight);
+
+  // Light tints: gently desaturate for softer UI colors
+  @return desaturate($mixed, $index * 4%); // 4%, 8%
+}
+
+// Emit CSS custom properties for each color/step
+:root {
+  @each $name, $color in $palette {
+    @each $index in $stops {
+      $val: palette-step($color, $index, $bg-ivory);
+
+      @if $index < 0 {
+        // e.g. --color-santa-fe--2, --color-santa-fe--1
+        --color-#{$name}--#{abs($index)}: #{$val};
+      } @else {
+        // e.g. --color-santa-fe-0, --color-santa-fe-1, --color-santa-fe-2
+        --color-#{$name}-#{$index}: #{$val};
+      }
+    }
+  }
+}
